@@ -1,0 +1,8 @@
+.DS_Store
+
+# Heavy media: keep the folder + SHOT-LIST.md tracked, ignore big binaries.
+# Comment these out if you'd rather version everything.
+assets/**/*.mov
+assets/**/*.mp4
+assets/**/*.zip
+assets/**/*.psd

@@ -1,0 +1,5 @@
+{
+  "_comment": "personalProjectsRoot is swept by social-draft as a backstop for commits the hook missed. projects: any repo basename set to 'private' is skipped by both the capture hook and social-draft. Anything not listed defaults to 'public'.",
+  "personalProjectsRoot": "/Users/zacharywalsh/sites/personal-projects",
+  "projects": {}
+}
