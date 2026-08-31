@@ -16,6 +16,24 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-08-31 13:46 · Skills · fd19891
+**What:** Taught the build-log system to clear its whole backlog, not just the
+latest entry. The automation drops a rough one-line "stub" after every commit
+and I (well, the assistant) turn each into a real write-up — but stubs from
+unattended runs or closed sessions were piling up untouched. Now any time the
+system runs, it works through every unfinished stub oldest-first.
+**Why it matters:** Second fix in a day to a thing I built yesterday. The
+capture half was solid; the "turn it into something readable" half only fired
+for whatever I'd just committed, so a gap of a few days meant a wall of raw
+stubs to slog through later. Small change, but it's the difference between a
+log that's always current and one that's a chore. Building-in-public tools
+have to survive your actual habits, not your intended ones.
+**Shareable:** no — too incremental on its own; fold into a broader "I'm
+building a tool to make myself post more" thread if that ever gets written.
+**Tags:** #dx #infra #building-in-public
+_2 files changed, 15 insertions(+), 6 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-08-31 09:18 · assistantOS · 7567265, e0354c0
 **What:** Finished a pass giving the whole app one consistent motion language —
 seven screens' worth of open/close, hover, and load-in animations built from a
