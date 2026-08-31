@@ -16,6 +16,28 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-08-31 09:18 · assistantOS · 7567265, e0354c0
+**What:** Finished a pass giving the whole app one consistent motion language —
+seven screens' worth of open/close, hover, and load-in animations built from a
+shared set of timing/easing tokens instead of ad-hoc values scattered around.
+The last piece was the file viewer: toggling in and out of edit mode now
+replays the panel's own open animation so the swap reads as "the document
+reopened," and closing plays that entrance in reverse at a quicker pace,
+because dismissing something shouldn't feel as heavy as summoning it.
+**Why it matters:** Motion is the thing that most separates an app that feels
+considered from one that feels like a stack of forms. Doing it as a token
+system rather than one-off transitions means the next new screen inherits the
+feel for free, and there's a written `MOTION.md` so I'm not re-deciding
+durations every time. Also a nice reminder that "done" is rarely done — the
+close animation needed a watchdog for the case where a browser extension
+strips animations without tripping the reduced-motion flag, or the close
+button would silently stop working.
+**Shareable:** yes — short screen recording of the file viewer opening,
+toggling to edit mode, and closing; plus the `MOTION.md` token table.
+**Tags:** #polish #ui #motion #design-system
+_files across two commits: 8 changed (token cleanup) + 4 changed, 322 insertions — MOTION.md, file-viewer-sheet.tsx, motion.ts, index.css · branch `main`_
+status: enriched
+
 ## 2026-08-31 08:24 · Skills · 48bccd6
 **What:** Fixed a blind spot in the automation that logs my work: when I commit
 with a one-liner like `cd other-project && git commit`, the session's working
