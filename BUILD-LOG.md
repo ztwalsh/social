@@ -16,6 +16,38 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-04 23:42 · assistantOS · 093445c
+**What:** Redesigned the Projects kanban board and ticket cards to look like a
+real product instead of a functional prototype — clear swim lanes for each
+column, colored priority dots, tidier spacing, and PR references that are now
+actual clickable links instead of static text.
+**Why it matters:** This is the board I actually use to track my own tickets,
+and it looked like a wireframe. Matched it against two reference screenshots
+of a polished SaaS kanban, but reused this app's own existing design tokens
+rather than importing new colors or components — so the whole app still feels
+like one system. Also caught and fixed a real keyboard bug along the way: the
+new PR link (and the pre-existing run/delete buttons) would get hijacked by
+the card's own click handler when activated with Enter instead of a mouse.
+**Shareable:** yes — before/after of the kanban board, plus a close-up of one
+card showing the priority dot + PR link.
+**Tags:** #polish #ui #design #bugfix
+_1 file changed, 79 insertions(+), 29 deletions(-) · branch `main`_
+status: enriched
+
+## 2026-08-31 17:47 · assistantOS · 50f4e86
+**What:** Added a Social view inside the app itself that shows this very
+build log — grouped by day, flagging entries still waiting to be enriched —
+instead of having to open the raw markdown file to see what's been shipped.
+**Why it matters:** The whole point of this log is to lower the friction of
+remembering what I built well enough to post about it; making it visible
+inside the app removes the last bit of friction (opening a separate file) and
+makes half-finished stub entries visible so they don't just pile up unseen.
+**Shareable:** no — this is tooling for writing about the other tools, not
+something a reader outside this workflow would care about on its own.
+**Tags:** #dx #infra #ui
+_6 files changed, 517 insertions(+), 5 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-08-31 13:46 · Skills · fd19891
 **What:** Taught the build-log system to clear its whole backlog, not just the
 latest entry. The automation drops a rough one-line "stub" after every commit
