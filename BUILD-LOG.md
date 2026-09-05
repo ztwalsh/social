@@ -16,6 +16,22 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-04 23:58 · assistantOS · 388712a
+**What:** Cleaned up the small text labels on the Social build-log cards
+("Why it matters", "Shareable", tags, day headings) so they use the exact
+same small-caps label style as the kanban board cards from earlier today,
+instead of a handful of slightly-different one-off sizes and weights.
+**Why it matters:** A follow-up to the kanban redesign — once one part of the
+app got a real design-token pass, the mismatched sibling right next to it in
+the nav became obvious. Small, but this is the kind of detail that decides
+whether an app feels like one considered thing or several screens bolted
+together.
+**Shareable:** no — too small a diff to carry a post on its own; worth folding
+into the kanban before/after post as a "and the sibling screen too" aside.
+**Tags:** #polish #ui #design
+_1 file changed, 5 insertions(+), 5 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-09-04 23:42 · assistantOS · 093445c
 **What:** Redesigned the Projects kanban board and ticket cards to look like a
 real product instead of a functional prototype — clear swim lanes for each
