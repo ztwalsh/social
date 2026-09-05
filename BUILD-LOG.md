@@ -16,6 +16,18 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-05 07:58 · assistantOS · a6b70ef
+**What:** Dropped a redundant sentence from the empty-project state on the
+kanban board — it used to explain that a `tickets/` folder gets created for
+you, right above four columns already saying "No tickets" in plain sight.
+**Why it matters:** Small copy trim, but it's the same instinct as the kanban
+redesign a day earlier: once you actually look at a screen instead of just
+shipping it, the redundant bits get obvious fast.
+**Shareable:** no — too small to stand alone.
+**Tags:** #polish #ui
+_1 file changed, 6 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-09-04 23:58 · assistantOS · 388712a
 **What:** Cleaned up the small text labels on the Social build-log cards
 ("Why it matters", "Shareable", tags, day headings) so they use the exact
