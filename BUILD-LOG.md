@@ -16,6 +16,38 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-10 16:44 · voice-capture · 910a3bc, 63b6c3c
+**What:** Proved out the two hardest unknowns for the Mac dictation app on real hardware, and got the throwaway "walking skeleton" compiling cleanly. Test one: the small floating "listening" panel never steals keyboard focus — confirmed in native Mac apps, a Chromium browser, and Slack (Electron). Test two: a matrix of how to insert transcribed text into eight target apps — pasting via the clipboard works in all eight; the tidier "accessibility API" route works in only four, and silently fails in Terminal while reporting success.
+**Why it matters:** This is the phase that decides whether the idea is even feasible on macOS, which offers no supported way to type into another app or to show UI without grabbing focus. Both came back green: focus stays put, paste is the insertion path to build on. The sharp lesson — a "success" result can't be trusted, the app has to read the text back to confirm it landed. A browser password field even accepted fake keystrokes without the OS flagging it, so the app has to dodge password fields itself.
+**Shareable:** yes — the 8-app × 3-strategy insertion matrix plus the focus-test output. Screenshot the terminal showing PASS across Notes / Chrome / Slack, the LANDED / NOT FOUND matrix, and the "SECURE INPUT IS ACTIVE" detection line.
+**Tags:** #experiment #infra #dx
+_2 files changed, 81 insertions(+), 23 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
+status: enriched
+
+## 2026-09-10 16:43 · assistantOS · c89e790, f5cb131, 7e9ea3c, 52676bb
+**What:** Selecting text in assistantOS and right-clicking now offers Copy as Markdown, Rich Text, or Plain Text — in both the rich editor and the read-only document view, matching the whole-file copy menu the viewer already had but scoped to the selection. Also fixed the reason the menu did nothing at first: opening the context menu cleared the selection, so every copy was a silent no-op; the selection is now captured the instant you right-click. And dropped the coloured tint from the project board's four column-header icons, since the layout already conveys status.
+**Why it matters:** Pulling a few paragraphs out of a doc and getting clean Markdown back — not HTML soup, not literal markup — is a small thing you feel every time it fails. The no-op bug is the classic kind that demos perfectly while nothing actually reaches the clipboard.
+**Shareable:** yes — right-click Copy-as menu open on a selection in the editor; before/after of pasting that selection somewhere plain (clean markdown vs raw HTML).
+**Tags:** #new-feature #bugfix #ui
+_4 commits, ~505 insertions / 159 deletions · branch `editor-copy-and-swimlane-icons`_
+status: enriched
+
+## 2026-09-08 20:21 · assistantOS · 34f7c73
+**What:** The "push to Google Drive" button in assistantOS now turns Markdown files into properly formatted Google Docs instead of a wall of literal `#` and `**`. Markdown is rendered to HTML first and handed to Drive's importer as an .html upload, so Google builds real headings, lists, tables, and bold/italic. Other file types keep the plain-text path.
+**Why it matters:** Before this, every doc pushed to Drive needed reformatting by hand before it was fit to share — the markup came through as raw text. Now it arrives as a real Doc. Small integration fix, but it's the difference between the feature being usable and not.
+**Shareable:** yes — the same document in Google Docs before and after: literal `# Heading` / `**bold**` versus rendered headings, real bold, and a table.
+**Tags:** #integration #zapier #bugfix
+_2 files changed, 199 insertions(+) · branch `drive-markdown-formatting`_
+status: enriched
+
+## 2026-09-06 10:23 · voice-capture · 09a171a
+**What:** Added one index page for the dictation app's design prototypes: every prototype — capsule states, background treatments, the main window, the capture flow — listed and grouped in one place, with the ability to archive superseded versions and filter to just the current set. It's now what loads by default at `/prototype/`.
+**Why it matters:** There were half a dozen loose prototype files and no map; finding "the latest main-window direction" meant knowing filenames. This makes the set browsable and keeps old versions out of the way without deleting them. Purely internal scaffolding.
+**Shareable:** no
+**Tags:** #dx #ui
+_3 files changed, 1289 insertions(+), 897 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
+status: enriched
+
 ## 2026-09-05 07:58 · assistantOS · a6b70ef
 **What:** Dropped a redundant sentence from the empty-project state on the
 kanban board — it used to explain that a `tickets/` folder gets created for
