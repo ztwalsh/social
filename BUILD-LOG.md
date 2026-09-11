@@ -16,6 +16,22 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-11 15:55 · voice-capture · aefd92c
+**What:** Ran the last untested piece of the Mac dictation app's de-risking phase: fed real 10-second recordings of my own voice to Apple's on-device speech recognizer and timed it, three separate takes.
+**Why it matters:** The whole app hinges on transcription being fast enough that dictating feels instant rather than like waiting on a spinner. The budget was under 1.5 seconds for a 10-second clip; it came back at 0.37–0.56 seconds — 18 to 28 times faster than real time, with clean transcripts and no hallucinated words on silence. That closes out the last open question from the app's proof-of-concept phase, so it's cleared to move on to actually running the full loop end to end.
+**Shareable:** yes — the terminal output showing the three PASS runs with realtime multipliers.
+**Tags:** #experiment #ai #macos
+_1 file changed, 17 insertions(+), 6 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
+status: enriched
+
+## 2026-09-11 11:10 · assistantOS · 4b019a7
+**What:** Bulk-imported a dozen meeting transcripts (1-1s, all-hands, review sessions) into the assistant project's notes.
+**Why it matters:** Housekeeping, not a feature — feeding meeting context into the assistant so it has real material to work from. Nothing here is shareable.
+**Shareable:** no
+**Tags:** #housekeeping
+_13 files changed, 1139 insertions(+) · branch `main`_
+status: enriched _(reconstructed from commit metadata — repo/SHA not locally reachable)_
+
 ## 2026-09-10 16:44 · voice-capture · 910a3bc, 63b6c3c
 **What:** Proved out the two hardest unknowns for the Mac dictation app on real hardware, and got the throwaway "walking skeleton" compiling cleanly. Test one: the small floating "listening" panel never steals keyboard focus — confirmed in native Mac apps, a Chromium browser, and Slack (Electron). Test two: a matrix of how to insert transcribed text into eight target apps — pasting via the clipboard works in all eight; the tidier "accessibility API" route works in only four, and silently fails in Terminal while reporting success.
 **Why it matters:** This is the phase that decides whether the idea is even feasible on macOS, which offers no supported way to type into another app or to show UI without grabbing focus. Both came back green: focus stays put, paste is the insertion path to build on. The sharp lesson — a "success" result can't be trusted, the app has to read the text back to confirm it landed. A browser password field even accepted fake keystrokes without the OS flagging it, so the app has to dodge password fields itself.
