@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-11 16:05 · voice-capture · 417efd3
+**What:** Actually ran the Mac dictation app end to end on real hardware for the first time: held the hotkey, spoke, released, and the transcribed sentence landed in TextEdit. Also caught and fixed a bug in the app's own latency counter — it had been timing from when you first pressed the key (so it counted the time spent talking) instead of from release, which made the release-to-text number look 5-10x worse than reality.
+**Why it matters:** This is the moment a proof-of-concept either works or doesn't, and it worked — the full loop (hotkey → record → transcribe → insert → log) is real, not just a plan. And the timing fix matters because a self-reported number that's wrong is worse than no number: once corrected, release-to-text came in at 0.53s for a 15-word sentence, comfortably under the 1.5s target.
+**Shareable:** yes — screen recording of holding the hotkey in TextEdit and watching the text appear, plus the corrected terminal timing line.
+**Tags:** #milestone #macos #ai
+_2 files changed, 8 insertions(+), 5 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
+status: enriched
+
 ## 2026-09-11 15:55 · voice-capture · aefd92c
 **What:** Ran the last untested piece of the Mac dictation app's de-risking phase: fed real 10-second recordings of my own voice to Apple's on-device speech recognizer and timed it, three separate takes.
 **Why it matters:** The whole app hinges on transcription being fast enough that dictating feels instant rather than like waiting on a spinner. The budget was under 1.5 seconds for a 10-second clip; it came back at 0.37–0.56 seconds — 18 to 28 times faster than real time, with clean transcripts and no hallucinated words on silence. That closes out the last open question from the app's proof-of-concept phase, so it's cleared to move on to actually running the full loop end to end.
