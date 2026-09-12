@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-12 06:35 · voice-capture · ecff2b9
+**What:** Swapped the dictation app's plain placeholder box for the actual designed UI: a floating pill that shows a real waveform while listening, a shimmering "Transcribing" label, and shake-and-message error states — matching a design/motion spec written earlier in the project, in both light and dark mode and with Reduce Motion support. Also fixed a real transcription bug found only by testing on real hardware: Apple's on-device speech engine was silently dropping everything said before a mid-sentence pause, so swapped to Apple's newer long-form engine instead.
+**Why it matters:** This is the "does the polish actually work" phase, and almost every fix here came from watching the real thing on a real Mac rather than from re-reading the spec: the waveform's motion looked like stop-motion because its smoothing rode the audio hardware's own jittery timing instead of a steady clock; the pill's shadow had a nasty rectangular halo from AppKit's own default window shadow; and it stayed stuck on one monitor in a three-monitor setup because it never re-checked where the cursor actually was. Each was invisible from the code and only showed up by trying it.
+**Shareable:** yes — screen recording of a full dictation showing the waveform responding to voice, the transcribing shimmer, and an error state shake; before/after if a stop-motion vs. smooth waveform clip can be captured.
+**Tags:** #ui #motion #bugfix #ai
+_7 files changed, 702 insertions(+), 88 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
+status: enriched
+
 ## 2026-09-11 16:05 · voice-capture · 417efd3
 **What:** Actually ran the Mac dictation app end to end on real hardware for the first time: held the hotkey, spoke, released, and the transcribed sentence landed in TextEdit. Also caught and fixed a bug in the app's own latency counter — it had been timing from when you first pressed the key (so it counted the time spent talking) instead of from release, which made the release-to-text number look 5-10x worse than reality.
 **Why it matters:** This is the moment a proof-of-concept either works or doesn't, and it worked — the full loop (hotkey → record → transcribe → insert → log) is real, not just a plan. And the timing fix matters because a self-reported number that's wrong is worse than no number: once corrected, release-to-text came in at 0.53s for a 15-word sentence, comfortably under the 1.5s target.
