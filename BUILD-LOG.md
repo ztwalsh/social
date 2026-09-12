@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-12 07:42 · voice-capture · bd8242a
+**What:** Turned the dictation app from "something I run from Xcode" into something installable: a real first-run setup screen that checks all three permissions live and tells you exactly what to click, working Launch-at-Login and debug-audio toggles in Settings, an activity log for when something goes wrong, and a one-command script that builds a double-clickable app.
+**Why it matters:** This is the gap between a working demo and something you'd actually trust to run every day — including the unglamorous but important bit: if you revoke one of its permissions by accident, it notices immediately and tells you, and un-revoking it works again without restarting the app. Tested that exact scenario live, both directions.
+**Shareable:** yes — screen recording of the setup screen catching a missing permission live, and toggling it on/off to show the app adapting without a restart.
+**Tags:** #new-feature #onboarding #macos
+_13 files changed, 568 insertions(+), 55 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
+status: enriched
+
 ## 2026-09-12 07:24 · voice-capture · 7000f5f
 **What:** Built the window where dictated transcripts actually live: a sidebar with an overview dashboard (a chart of captures per day, this week vs last), a searchable browsable list of everything ever said, a "read the raw file" document view, and a settings page — plus the menu bar icon needed to open any of it, since until now the app had no way in besides the hotkey itself.
 **Why it matters:** The dictation app was "type by voice" only — the words landed in whatever app you were using but there was no way to go back and find, copy, or clean up something you said last week. This is the piece that makes a session's output actually yours to manage afterward, not just a one-way fire-and-forget. Caught a real bug along the way too: search worked in the card-list view but silently did nothing in the "read the file" view — found only by trying it, not by reading the code.
