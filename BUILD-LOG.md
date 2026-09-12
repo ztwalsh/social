@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-12 07:24 · voice-capture · 7000f5f
+**What:** Built the window where dictated transcripts actually live: a sidebar with an overview dashboard (a chart of captures per day, this week vs last), a searchable browsable list of everything ever said, a "read the raw file" document view, and a settings page — plus the menu bar icon needed to open any of it, since until now the app had no way in besides the hotkey itself.
+**Why it matters:** The dictation app was "type by voice" only — the words landed in whatever app you were using but there was no way to go back and find, copy, or clean up something you said last week. This is the piece that makes a session's output actually yours to manage afterward, not just a one-way fire-and-forget. Caught a real bug along the way too: search worked in the card-list view but silently did nothing in the "read the file" view — found only by trying it, not by reading the code.
+**Shareable:** yes — screen recording browsing the window: overview stats/chart, searching for a phrase, switching to the document view, deleting a card.
+**Tags:** #new-feature #ui #macos
+_12 files changed, 1225 insertions(+), 9 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
+status: enriched
+
 ## 2026-09-12 06:59 · voice-capture · 7d0d5a7
 **What:** Fixed the dictation app's "Reduce Motion" accessibility support, which looked right in code but silently did nothing when actually toggled on — found by testing it live rather than trusting the implementation.
 **Why it matters:** A neat lesson in the gap between "the code says it should work" and "it works": the app was checking Apple's standard SwiftUI signal for the system's Reduce Motion setting, but that signal never reached this particular floating panel because of how it's built (a background panel that never becomes the active window). Reading the setting a different, lower-level way fixed it. A feature that silently no-ops for the people who most need it is worse than not having the feature at all.
