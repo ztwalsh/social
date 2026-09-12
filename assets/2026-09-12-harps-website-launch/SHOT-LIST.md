@@ -1,0 +1,3 @@
+- Hero section, capsule demo mid-cycle through a couple of states
+- Full-page scroll capture of index.html
+- Short screen recording of the capsule hero looping through listening → transcribing → inserted

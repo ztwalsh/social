@@ -16,6 +16,22 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-12 17:17 · voice-capture · f0d585f
+**What:** Replaced every system icon in the app with a real icon set pulled by hand from Central Icons, added search filters and an auto-delete setting for old transcripts, gave Document view a selection-anchored copy/delete toolbar, added a Feedback page that dogfoods the app's own dictation hotkey, and fixed a real bug where that hotkey silently did nothing while the app's own window was focused.
+**Why it matters:** The hotkey fix is the one that actually matters to a user — "hold the hotkey to dictate" not working while inside the app's own window (e.g. typing feedback about the app) is exactly the kind of self-referential bug that's easy to miss and embarrassing to ship. Root cause was a one-line macOS gotcha: `addGlobalMonitorForEvents` explicitly never fires for a process's own windows. Everything else is the visual pass catching up to a real icon system instead of borrowed SF Symbols and hand-drawn shapes.
+**Shareable:** yes — before/after of the icon set (SF Symbols vs. Central Icons), and a quick clip of dictating feedback into the app's own Feedback page.
+**Tags:** #bugfix #ui #polish #new-feature
+_20 files changed, 1912 insertions(+), 576 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
+status: enriched
+
+## 2026-09-12 17:17 · harps-website · 224fca2
+**What:** Stood up a static marketing site for Harps, built straight from the app's own design system — same fonts (Geist/Geist Mono), same near-monochrome palette, plus a hero section with a capsule demo that cycles through the app's own states live.
+**Why it matters:** _(reconstructed from commit metadata)_ Building the marketing site directly off the app's `design.md` rather than a fresh design pass means the site and the app can't visually drift apart — anyone who tries the site sees exactly the product they'd actually get.
+**Shareable:** yes — the live-cycling capsule hero is the kind of thing that reads well as a short clip.
+**Tags:** #new-feature #marketing #ui
+_19 files changed, 2578 insertions(+) · branch `main`_
+status: enriched
+
 ## 2026-09-12 09:13 · voice-capture · a5b20f0
 **What:** Fixed an ugly, always-visible scrollbar in the transcript window that Apple's own recommended one-line fix didn't actually fix, once tried live.
 **Why it matters:** Second time this project has hit "the documented API for this just silently doesn't work" in this particular app's unusual setup — worth noticing as a pattern, since it means anything that looks visually wrong here is worth actually testing rather than trusting the fix on paper. Had to reach one layer deeper into the underlying macOS toolkit to force the real fix.

@@ -1,0 +1,5 @@
+- Settings page before/after: SF Symbols vs. the new Central Icons set
+- Sidebar nav before/after (hand-drawn icons vs. Central Icons grid/file-text/sliders)
+- Short clip: opening the Feedback page and dictating into it with the app's own hotkey, watching the text appear
+- Document view: selecting a chunk of transcript text and the floating copy/delete toolbar appearing below it
+- Transcripts search with the app/date filter chips visible
