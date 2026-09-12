@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-12 08:44 · voice-capture · 16f3b8d
+**What:** Fixed a weird visual glitch spotted live: two entries in the transcript list that looked identical, where hovering over one made the *other* one light up instead.
+**Why it matters:** Classic case of a bug that's invisible in the code but obvious the instant you touch the actual app — two dictations happened to land in the same minute in the same app, and the list was accidentally using "time + app" as each row's unique identity instead of something that's actually always unique. Screen-shared feedback caught it in seconds; it would've been easy to miss just reading the source.
+**Shareable:** no — too small/technical to stand alone.
+**Tags:** #bugfix #ui
+_1 file changed, 12 insertions(+), 1 deletion(-) · branch `claude/mac-voice-capture-app-fdpi64`_
+status: enriched
+
 ## 2026-09-12 08:39 · voice-capture · 9aa8b8c
 **What:** Added the small interaction details that separate "functional" from "feels designed": buttons on each transcript card now fade in only when you hover over it instead of cluttering the view all the time, cards animate smoothly open instead of snapping, new items settle into place with a soft rise instead of popping in, and the tab switcher's highlight slides between tabs instead of jumping.
 **Why it matters:** None of these change what the app does — they change how it feels to use, which is the whole point of a dedicated polish pass. Small, deliberate motion is what makes an interface feel considered rather than assembled.
