@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-12 08:57 · voice-capture · 7b48a0a
+**What:** Replaced the generic macOS-blue "OK" button and mis-aligned header on the first-run setup screen with real buttons designed to match the rest of the app — solid black/white fill for the main action, a bordered style for secondary ones — since the app's whole visual language deliberately avoids color except for two very specific meanings (red = recording, green = improved).
+**Why it matters:** A screenshot review caught what code review couldn't: the setup screen technically worked but looked like a generic system dialog bolted onto a custom-designed app, which undercuts the effort put into everything else. Small detail, but exactly the kind that separates "looks handmade" from "looks default."
+**Shareable:** yes — before/after of the setup screen, generic blue button vs. the new matching style.
+**Tags:** #polish #ui
+_3 files changed, 75 insertions(+), 20 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
+status: enriched
+
 ## 2026-09-12 08:44 · voice-capture · 16f3b8d
 **What:** Fixed a weird visual glitch spotted live: two entries in the transcript list that looked identical, where hovering over one made the *other* one light up instead.
 **Why it matters:** Classic case of a bug that's invisible in the code but obvious the instant you touch the actual app — two dictations happened to land in the same minute in the same app, and the list was accidentally using "time + app" as each row's unique identity instead of something that's actually always unique. Screen-shared feedback caught it in seconds; it would've been easy to miss just reading the source.
