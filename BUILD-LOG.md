@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-12 08:32 · voice-capture · 84e3f84
+**What:** Swapped every piece of text in the dictation app — the floating pill and the whole history window — from the generic system font over to the actual typeface (Geist) the design called for from the start, with the right weight and letter-spacing in each spot instead of guessed approximations.
+**Why it matters:** First step of a broader "make it actually look designed, not just functional" pass. The font files only existed in a web format that doesn't work in a native Mac app, so had to extract real weight variants from them by hand before any of this was possible — the unglamorous prerequisite before the visible payoff.
+**Shareable:** no — a font swap alone isn't visually dramatic enough to post; better bundled with the fuller polish pass once it's done.
+**Tags:** #polish #ui
+_14 files changed, 145 insertions(+), 49 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
+status: enriched
+
 ## 2026-09-12 08:05 · voice-capture · 1f42957
 **What:** Added a second way to dictate: click the menu bar icon once to start recording hands-free (no key to hold down), click again (or a stop button on the floating pill itself) to finish. The icon itself turns red for as long as it's listening, in either mode, so you can tell it's live even with every window covered.
 **Why it matters:** The original hold-a-key method is great for a quick sentence but awkward for anything longer — this is the "start it and keep typing/thinking while it listens" mode. Found a fun bug building it: macOS reports which mouse button you clicked on a menu bar icon backwards from what its own documentation implies, so left and right click were swapped until tested by hand.
