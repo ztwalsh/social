@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-12 06:59 · voice-capture · 7d0d5a7
+**What:** Fixed the dictation app's "Reduce Motion" accessibility support, which looked right in code but silently did nothing when actually toggled on — found by testing it live rather than trusting the implementation.
+**Why it matters:** A neat lesson in the gap between "the code says it should work" and "it works": the app was checking Apple's standard SwiftUI signal for the system's Reduce Motion setting, but that signal never reached this particular floating panel because of how it's built (a background panel that never becomes the active window). Reading the setting a different, lower-level way fixed it. A feature that silently no-ops for the people who most need it is worse than not having the feature at all.
+**Shareable:** no — too in-the-weeds to stand alone as a post.
+**Tags:** #accessibility #bugfix
+_1 file changed, 16 insertions(+), 1 deletion(-) · branch `claude/mac-voice-capture-app-fdpi64`_
+status: enriched
+
 ## 2026-09-12 06:35 · voice-capture · ecff2b9
 **What:** Swapped the dictation app's plain placeholder box for the actual designed UI: a floating pill that shows a real waveform while listening, a shimmering "Transcribing" label, and shake-and-message error states — matching a design/motion spec written earlier in the project, in both light and dark mode and with Reduce Motion support. Also fixed a real transcription bug found only by testing on real hardware: Apple's on-device speech engine was silently dropping everything said before a mid-sentence pause, so swapped to Apple's newer long-form engine instead.
 **Why it matters:** This is the "does the polish actually work" phase, and almost every fix here came from watching the real thing on a real Mac rather than from re-reading the spec: the waveform's motion looked like stop-motion because its smoothing rode the audio hardware's own jittery timing instead of a steady clock; the pill's shadow had a nasty rectangular halo from AppKit's own default window shadow; and it stayed stuck on one monitor in a three-monitor setup because it never re-checked where the cursor actually was. Each was invisible from the code and only showed up by trying it.
