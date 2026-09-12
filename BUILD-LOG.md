@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-12 08:39 · voice-capture · 9aa8b8c
+**What:** Added the small interaction details that separate "functional" from "feels designed": buttons on each transcript card now fade in only when you hover over it instead of cluttering the view all the time, cards animate smoothly open instead of snapping, new items settle into place with a soft rise instead of popping in, and the tab switcher's highlight slides between tabs instead of jumping.
+**Why it matters:** None of these change what the app does — they change how it feels to use, which is the whole point of a dedicated polish pass. Small, deliberate motion is what makes an interface feel considered rather than assembled.
+**Shareable:** yes, once bundled with the rest of the polish pass — a short before/after clip of hover-reveal and the sliding tab would read well.
+**Tags:** #polish #ui #motion
+_3 files changed, 39 insertions(+), 4 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
+status: enriched
+
 ## 2026-09-12 08:32 · voice-capture · 84e3f84
 **What:** Swapped every piece of text in the dictation app — the floating pill and the whole history window — from the generic system font over to the actual typeface (Geist) the design called for from the start, with the right weight and letter-spacing in each spot instead of guessed approximations.
 **Why it matters:** First step of a broader "make it actually look designed, not just functional" pass. The font files only existed in a web format that doesn't work in a native Mac app, so had to extract real weight variants from them by hand before any of this was possible — the unglamorous prerequisite before the visible payoff.
