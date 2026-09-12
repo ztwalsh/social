@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-12 09:13 · voice-capture · a5b20f0
+**What:** Fixed an ugly, always-visible scrollbar in the transcript window that Apple's own recommended one-line fix didn't actually fix, once tried live.
+**Why it matters:** Second time this project has hit "the documented API for this just silently doesn't work" in this particular app's unusual setup — worth noticing as a pattern, since it means anything that looks visually wrong here is worth actually testing rather than trusting the fix on paper. Had to reach one layer deeper into the underlying macOS toolkit to force the real fix.
+**Shareable:** no — too small/technical to stand alone.
+**Tags:** #bugfix #ui #polish
+_5 files changed, 42 insertions(+) · branch `claude/mac-voice-capture-app-fdpi64`_
+status: enriched
+
 ## 2026-09-12 08:57 · voice-capture · 7b48a0a
 **What:** Replaced the generic macOS-blue "OK" button and mis-aligned header on the first-run setup screen with real buttons designed to match the rest of the app — solid black/white fill for the main action, a bordered style for secondary ones — since the app's whole visual language deliberately avoids color except for two very specific meanings (red = recording, green = improved).
 **Why it matters:** A screenshot review caught what code review couldn't: the setup screen technically worked but looked like a generic system dialog bolted onto a custom-designed app, which undercuts the effort put into everything else. Small detail, but exactly the kind that separates "looks handmade" from "looks default."
