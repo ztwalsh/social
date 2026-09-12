@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-12 08:05 · voice-capture · 1f42957
+**What:** Added a second way to dictate: click the menu bar icon once to start recording hands-free (no key to hold down), click again (or a stop button on the floating pill itself) to finish. The icon itself turns red for as long as it's listening, in either mode, so you can tell it's live even with every window covered.
+**Why it matters:** The original hold-a-key method is great for a quick sentence but awkward for anything longer — this is the "start it and keep typing/thinking while it listens" mode. Found a fun bug building it: macOS reports which mouse button you clicked on a menu bar icon backwards from what its own documentation implies, so left and right click were swapped until tested by hand.
+**Shareable:** yes — screen recording clicking the menu bar icon to start, the wider pill with its stop button, clicking stop, text landing.
+**Tags:** #new-feature #ui #macos
+_5 files changed, 213 insertions(+), 39 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
+status: enriched
+
 ## 2026-09-12 07:42 · voice-capture · bd8242a
 **What:** Turned the dictation app from "something I run from Xcode" into something installable: a real first-run setup screen that checks all three permissions live and tells you exactly what to click, working Launch-at-Login and debug-audio toggles in Settings, an activity log for when something goes wrong, and a one-command script that builds a double-clickable app.
 **Why it matters:** This is the gap between a working demo and something you'd actually trust to run every day — including the unglamorous but important bit: if you revoke one of its permissions by accident, it notices immediately and tells you, and un-revoking it works again without restarting the app. Tested that exact scenario live, both directions.
