@@ -16,6 +16,62 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-13 11:52 · harps-website · d1ee1cb
+**What:** Killed light mode on the marketing site entirely — the page now always renders the dark palette, no matter the visitor's system setting.
+**Why it matters:** A straightforward call ("it looks better") but a real one: rather than maintaining two palettes that both need to look intentional, the site now commits to one. Cleaned up the code too — the capsule's shadow and the hero's ambient particle field no longer branch on `prefers-color-scheme`, since there's only one scheme now.
+**Shareable:** no — a "we removed a feature" commit doesn't carry a post on its own; worth a passing line in a broader "here's the site" thread if one gets written.
+**Tags:** #polish #ui #design
+_2 files changed, 23 insertions(+), 54 deletions(-) · branch `main`_
+status: enriched
+
+## 2026-09-13 11:20 · harps-website · ea65c24
+**What:** Built a real three-step "how it works" section for the homepage — capture, transcribe, review & tune — each step with its own tiny live mockup (a listening capsule, text assembling in a field, a mini activity/settings window), replacing a section that had sat there with just an unlabeled dashboard screenshot and nothing else. Also reworked the footer (simplified to just the brand mark and copyright, no link clutter), evened out and increased the spacing between every section, and gave the privacy page the same load-in/scroll-reveal motion the homepage already had.
+**Why it matters:** The site had a "How it works" link in the nav that, until this, actually scrolled to the feature grid — there wasn't a real how-it-works section at all. This closes that gap with an actual walkthrough instead of a placeholder, and catches the privacy page up so it doesn't feel like a separate, unfinished corner of the site.
+**Shareable:** yes — before/after of the old bare dashboard mockup vs. the new three-step stepper, plus a clip of each mini mockup animating (pulsing capsule, text typing in, the settings toggle).
+**Tags:** #new-feature #ui #polish #motion
+_5 files changed, 572 insertions(+), 60 deletions(-) · branch `main`_
+status: enriched
+
+## 2026-09-13 09:56 · harps-website · 717f48b
+**What:** Fixed three icons in the feature grid that didn't match what they were labeling (a music note for "search," a hamburger menu for "works in any app," a lightning bolt for "push-to-talk"), removed a couple of unnecessary divider lines, and rebuilt the pricing section from a two-tier free/paid structure into a single "free during early access" card that hints at a future $5 one-time price without committing to a date.
+**Why it matters:** The pricing rewrite solves a real problem: how do you launch free without training everyone to expect free forever? The card says exactly that — early access is free, and there'll be a one-time cost once it's ready to leave that phase — without overpromising specifics. Also caught a genuinely sneaky CSS bug along the way: a hover transition that looked correctly written but silently never applied, because a later, unrelated rule with equal specificity was fully overwriting the `transition` property on the same elements.
+**Shareable:** yes — before/after of the pricing card (two-tier vs. single early-access card), and the icon swaps side by side with what they used to be.
+**Tags:** #ui #polish #bugfix #pricing
+_2 files changed, 33 insertions(+), 32 deletions(-) · branch `main`_
+status: enriched
+
+## 2026-09-13 09:39 · harps-website · 6116095
+**What:** The homepage's "Download for Mac" buttons now point at a real, signed and notarized DMG instead of a dead `#download` anchor that went nowhere. Also carried forward a handful of smaller edits that had been sitting uncommitted locally — softer hero headline copy, smoother card hover easing, and a couple of unneeded section-divider lines removed.
+**Why it matters:** This is the moment the site stopped being a mockup and started being able to actually convert a visitor — clicking Download used to be a dead end, now it's the real app.
+**Shareable:** no — infrastructure/plumbing, nothing visually new to show; the fact that the button now works is more of a footnote in a "the site is live" post than its own.
+**Tags:** #infra #bugfix
+_2 files changed, 12 insertions(+), 18 deletions(-) · branch `main`_
+status: enriched
+
+## 2026-09-13 08:23 · harps-website · d01eb51
+**What:** Promoted the hero's headline demo from a playground prototype to the real homepage: a text field and a capsule now swap places on the same line to show the product's actual loop — idle → listening → transcribing → the result drops into the field → dwells → deletes itself → loops. Rebuilt the crossfade so the capsule's inner content (dot, waveform, label, timer) fades out and back in on its own short delay, decoupled from the pill's own collapse/expand, so nothing ever looks squished mid-transition.
+**Why it matters:** This is the first thing anyone sees on the site, and it went from a static screenshot to a live, looping demonstration of the actual product — a visitor watches the real capture-to-text loop before reading a single line of marketing copy.
+**Shareable:** yes — screen capture of the full hero loop: field idle, capsule rising and listening, transcribing, text dropping into the field, then deleting and looping again.
+**Tags:** #new-feature #ui #motion
+_3 files changed, 525 insertions(+), 59 deletions(-) · branch `main`_
+status: enriched
+
+## 2026-09-12 19:37 · harps-website · 1beb0a9, 4f23ee1
+**What:** Two small consistency fixes minutes apart: the accent color was still the original red in light mode even though dark mode had already switched to the Figma file's blue, so both modes were made to match — and the header picked up a touch more top padding so it doesn't feel cramped against the browser edge.
+**Why it matters:** Housekeeping, not a feature — the kind of small mismatch that's invisible until you flip between light and dark and notice the accent color changed meaning halfway through.
+**Shareable:** no — too small to stand alone.
+**Tags:** #polish #ui
+_2 files changed, 3 insertions(+), 3 deletions(-) · branch `main`_
+status: enriched
+
+## 2026-09-12 17:30 · harps-website · b193d6e
+**What:** Added a `.gitignore` entry for the local Vercel project-link files so they stop showing up as untracked in every `git status`.
+**Why it matters:** Pure housekeeping — keeps the repo clean, nothing a reader would care about.
+**Shareable:** no
+**Tags:** #housekeeping #dx
+_1 file changed, 2 insertions(+) · branch `main`_
+status: enriched
+
 ## 2026-09-12 17:17 · voice-capture · f0d585f
 **What:** Replaced every system icon in the app with a real icon set pulled by hand from Central Icons, added search filters and an auto-delete setting for old transcripts, gave Document view a selection-anchored copy/delete toolbar, added a Feedback page that dogfoods the app's own dictation hotkey, and fixed a real bug where that hotkey silently did nothing while the app's own window was focused.
 **Why it matters:** The hotkey fix is the one that actually matters to a user — "hold the hotkey to dictate" not working while inside the app's own window (e.g. typing feedback about the app) is exactly the kind of self-referential bug that's easy to miss and embarrassing to ship. Root cause was a one-line macOS gotcha: `addGlobalMonitorForEvents` explicitly never fires for a process's own windows. Everything else is the visual pass catching up to a real icon system instead of borrowed SF Symbols and hand-drawn shapes.
