@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-13 15:34 · harps-website · b18e5a6
+**What:** Bumped up the type size on the hero subhead, feature-card headings, and how-it-works step headings for clearer hierarchy, and simplified the pricing card — folded "Lifetime access" directly into the badge instead of repeating it as a separate heading, and updated the section headline to "Free for everyone."
+**Why it matters:** A pass of the same instinct as the rest of this week's work on the site — once the bigger structural pieces (how-it-works section, pricing card, dark-only palette) were in place, the remaining gap was type feeling a size too small in a few spots.
+**Shareable:** no — incremental type/copy tightening, not visually distinct enough to carry its own post; would read fine as an aside in a broader "here's the finished site" thread.
+**Tags:** #polish #ui #design
+_1 file changed, 10 insertions(+), 10 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-09-13 11:52 · harps-website · d1ee1cb
 **What:** Killed light mode on the marketing site entirely — the page now always renders the dark palette, no matter the visitor's system setting.
 **Why it matters:** A straightforward call ("it looks better") but a real one: rather than maintaining two palettes that both need to look intentional, the site now commits to one. Cleaned up the code too — the capsule's shadow and the hero's ambient particle field no longer branch on `prefers-color-scheme`, since there's only one scheme now.
