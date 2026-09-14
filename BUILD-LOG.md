@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-13 21:47 · harps-website · f0ac4fe
+**What:** Wired up Google Analytics on the marketing site and rewrote the privacy page's "This website" section, which had previously stated outright that there was no analytics on the site — now it accurately discloses what GA collects (cookies, standard visit data like pages viewed and device/browser type) and makes explicit that the actual Mac app is unaffected and still has zero telemetry or connection to Google.
+**Why it matters:** The interesting part isn't the tracking snippet itself — it's the discipline of catching that adding analytics quietly made an existing privacy claim false, and fixing the claim in the same change instead of letting the site's stated privacy stance drift out of sync with what it actually does.
+**Shareable:** no — infrastructure, and the actual interesting bit (a privacy page that keeps itself honest) is subtle enough to undersell in a screenshot.
+**Tags:** #infra #privacy
+_2 files changed, 23 insertions(+), 2 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-09-13 15:34 · harps-website · b18e5a6
 **What:** Bumped up the type size on the hero subhead, feature-card headings, and how-it-works step headings for clearer hierarchy, and simplified the pricing card — folded "Lifetime access" directly into the badge instead of repeating it as a separate heading, and updated the section headline to "Free for everyone."
 **Why it matters:** A pass of the same instinct as the rest of this week's work on the site — once the bigger structural pieces (how-it-works section, pricing card, dark-only palette) were in place, the remaining gap was type feeling a size too small in a few spots.
