@@ -16,6 +16,240 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-23 10:14 · ztwalsh.com · c810a2f
+**What:** Rebuilt my personal site's whole look: black-and-white instead of
+green-and-gold, and the entire page now renders through a real WebGL CRT
+shader — scanlines, bloom, RGB shift — with a click to invert between a dark
+and light "tube." Also added Solid State, a drag-to-spin point-cloud toy that
+morphs between sphere, cube, and pyramid, to the experiments list.
+**Why it matters:** This started as two throwaway Claude artifact prototypes
+that got good enough to ship for real — mirroring the actual DOM onto a canvas
+and running it through a genuine CRT fragment shader, not a CSS filter doing a
+vague scanline impression. The invert toggle plays a little power-cycle
+animation, which is the kind of detail that makes a personal site feel like a
+piece of software instead of a brochure.
+**Shareable:** yes — screen recording of the invert toggle's power-cycle
+animation, plus the Solid State toy being dragged/spun on the experiments page.
+**Tags:** #new-feature #ui #design #experiment
+_7 files changed, 1136 insertions(+), 353 deletions(-) · branch `main`_
+status: enriched
+
+## 2026-09-21 17:07 · harps-website · 551be5f
+**What:** Ship Harps v0.4.2
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_2 files changed, 8 insertions(+) · branch `main`_
+status: stub
+
+## 2026-09-21 17:07 · voice-capture · d98224b
+**What:** Bump to v0.4.2: fix SpeechAnalyzer worker-reuse crash, stat card deltas
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_4 files changed, 49 insertions(+), 22 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
+status: stub
+
+## 2026-09-19 12:11 · harps-website · b345458
+**What:** Tweak changelog page lede copy
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_1 file changed, 1 insertion(+), 1 deletion(-) · branch `main`_
+status: stub
+
+## 2026-09-19 12:08 · harps-website · 1b8c288
+**What:** Tweak changelog page lede copy
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_1 file changed, 1 insertion(+), 1 deletion(-) · branch `main`_
+status: stub
+
+## 2026-09-19 12:03 · harps-website · ef452cc
+**What:** Ship Harps v0.4.1
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_2 files changed, 10 insertions(+) · branch `main`_
+status: stub
+
+## 2026-09-19 12:02 · voice-capture · 6ad904e
+**What:** Bump to v0.4.1: day-switch motion, Transforms editor polish
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_5 files changed, 67 insertions(+), 6 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
+status: stub
+
+## 2026-09-19 08:10 · harps-website · 8d5414e
+**What:** Ship Harps v0.4.0
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_2 files changed, 10 insertions(+) · branch `main`_
+status: stub
+
+## 2026-09-19 08:10 · voice-capture · d3e8aca
+**What:** Bump to v0.4: manual refresh, crash fix, transform delete confirmation
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_8 files changed, 199 insertions(+), 63 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
+status: stub
+
+## 2026-09-19 07:20 · harps-website · 968edc3
+**What:** Move particle-background-demo into playground, link from index
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_2 files changed, 5 insertions(+) · branch `main`_
+status: stub
+
+## 2026-09-19 07:17 · harps-website · 153f4f5
+**What:** Ship Harps v0.3.0
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_2 files changed, 10 insertions(+) · branch `main`_
+status: stub
+
+## 2026-09-19 07:16 · voice-capture · 08133d5
+**What:** Bump to v0.3: Transforms rich text editor, faster transcription, capsule fixes
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_7 files changed, 824 insertions(+), 43 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
+status: stub
+
+## 2026-09-19 06:49 · ticket-home-hero-generating-state · 9185f1c
+**What:** Add honest cold-start generating state to Home hero
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_1 file changed, 108 insertions(+), 14 deletions(-) · branch `worktree-ticket-home-hero-generating-state`_
+status: stub
+
+## 2026-09-18 16:38 · ticket-home-hero-period-comparison · 8665241
+**What:** Add month-over-month comparison to Home hero headline
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_2 files changed, 108 insertions(+), 7 deletions(-) · branch `worktree-ticket-home-hero-period-comparison`_
+status: stub
+
+## 2026-09-18 16:23 · cardio-tracking · f5608b3
+**What:** Add insights hero iteration tickets (freshness, comparison, loading state)
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_3 files changed, 238 insertions(+) · branch `main-sync`_
+status: stub
+
+## 2026-09-18 16:22 · queue-main · 909a0dc
+**What:** Fix ticket status: restore review/PR link after erroneous re-lock
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_1 file changed, 3 insertions(+), 1 deletion(-) · branch `queue-main-snapshot`_
+status: stub
+
+## 2026-09-18 14:23 · ticket-home-hero-freshness-cache-invalidation · b32b57e
+**What:** Fold in-window run data into Home hero cache key, not just month boundary
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_2 files changed, 32 insertions(+), 9 deletions(-) · branch `worktree-ticket-home-hero-freshness-cache-invalidation`_
+status: stub
+
+## 2026-09-18 13:57 · ticket-home-hero-freshness-cache-invalidation · fb34328
+**What:** Invalidate Home hero cache when in-window run data changes, not just on month rollover
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_2 files changed, 30 insertions(+), 10 deletions(-) · branch `worktree-ticket-home-hero-freshness-cache-invalidation`_
+status: stub
+
+## 2026-09-17 22:54 · harps-website · 22c3191
+**What:** Ship Harps v0.2.0
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_2 files changed, 11 insertions(+) · branch `main`_
+status: stub
+
+## 2026-09-17 22:53 · voice-capture · 370f3b5
+**What:** Bump to v0.2: Transforms feature, hotkey mode setting, Dock/menu-bar fixes
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_41 files changed, 2544 insertions(+), 85 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
+status: stub
+
+## 2026-09-17 21:36 · harps-website · 10ef374
+**What:** Add changelog page, move Privacy/Changelog links to footer
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_3 files changed, 178 insertions(+), 1 deletion(-) · branch `main`_
+status: stub
+
+## 2026-09-17 21:36 · harps-website · 0287d77
+**What:** Add changelog page, move Privacy/Changelog links to footer
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_3 files changed, 178 insertions(+), 1 deletion(-) · branch `main`_
+status: stub
+
+## 2026-09-17 15:30 · assistant · c771b9f
+**What:** Add meeting notes: Growth Zone Leads AMA With Jenica Arvind and Zach
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_1 file changed, 269 insertions(+) · branch `main`_
+status: stub
+
+## 2026-09-17 13:47 · assistant · 81c2d66
+**What:** Add meeting notes: Todd Zach Skip 1-1, Gwen Zach 1-1, Cece Zach 1-1, Post Build All-Hands Q&A Session 1
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_4 files changed, 1524 insertions(+) · branch `main`_
+status: stub
+
+## 2026-09-16 22:19 · harps-website · b75cbac
+**What:** Update download to the new icon/DMG-background build
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_1 file changed, 0 insertions(+), 0 deletions(-) · branch `main`_
+status: stub
+
+## 2026-09-16 22:14 · ztwalsh.com · bc563a3
+**What:** Swap icons to Hugeicons, move Harps to top of experiments
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_3 files changed, 39 insertions(+), 18 deletions(-) · branch `main`_
+status: stub
+
+## 2026-09-16 22:14 · ztwalsh.com · e25711e
+**What:** Swap icons to Hugeicons, move Harps to top of experiments Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_3 files changed, 39 insertions(+), 18 deletions(-) · branch `main`_
+status: stub
+
+## 2026-09-16 14:37 · assistant · 6a84d1a
+**What:** Add meeting notes: Callie Zach Skip 1-1, Commerce Growth Zone Merger AMA, Monthly Design and Research Roundtable
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_8 files changed, 1966 insertions(+) · branch `main`_
+status: stub
+
 ## 2026-09-13 21:47 · harps-website · f0ac4fe
 **What:** Wired up Google Analytics on the marketing site and rewrote the privacy page's "This website" section, which had previously stated outright that there was no analytics on the site — now it accurately discloses what GA collects (cookies, standard visit data like pages viewed and device/browser type) and makes explicit that the actual Mac app is unaffected and still has zero telemetry or connection to Google.
 **Why it matters:** The interesting part isn't the tracking snippet itself — it's the discipline of catching that adding analytics quietly made an existing privacy claim false, and fixing the claim in the same change instead of letting the site's stated privacy stance drift out of sync with what it actually does.
