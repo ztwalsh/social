@@ -25,12 +25,12 @@ _2 files changed, 12 insertions(+), 2 deletions(-) · branch `main`_
 status: enriched
 
 ## 2026-09-28 22:46 · voice-capture · b167656
-**What:** Group Settings/Transforms into bordered iOS-style card containers
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** Harps' Settings and Transforms pages now group their rows into bordered, iOS-style card sections — Settings splits into Dictation / Storage / General instead of one long flat list — matching the grouped-list look of the cardio-tracking sibling app, using a plain hairline border with no background or shadow change.
+**Why it matters:** Settings had quietly grown to a dozen-plus rows in one undifferentiated column; grouping them is the difference between a settings screen that looks native to macOS and one that reads as a form. Also a good real-time example of iterating live with feedback — an early pass added a background wash and drop shadow that changed the whole page's tone, and got reverted back down to just borders once that looked wrong running in the actual app.
+**Shareable:** yes — before/after of the Settings page (flat list vs. the three bordered groups).
+**Tags:** #polish #ui #macos
 _3 files changed, 143 insertions(+), 49 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
-status: stub
+status: enriched
 
 ## 2026-09-28 22:44 · cardio-tracking-website · 647bad8
 **What:** Hooked movethink.app up to Google Analytics, and added a short "This website" section to the privacy policy saying that the site (not the app) counts visits, and that none of it is tied to an account.
@@ -57,76 +57,68 @@ _3 files changed, 6 insertions(+), 6 deletions(-) · branch `main`_
 status: enriched
 
 ## 2026-09-28 22:00 · zapier-gallery · 5559db4
-**What:** Add Okta login, require it for submissions and activity updates
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** Replaced the internal prototype gallery's "just type your name" placeholder login with real Okta sign-in, and now requires it to submit a prototype or post an activity update — both now attribute to the actual signed-in person instead of a free-text name, and the "Mine" filter (previously a permanent disabled placeholder) actually works.
+**Why it matters:** Closes the obvious hole in a shared internal tool — anyone could previously post as anyone by just typing a different name. Real auth is what makes "Mine" and attribution trustworthy.
+**Shareable:** no — internal Zapier tooling, not for a public audience.
+**Tags:** #infra #integration #zapier
 _15 files changed, 195 insertions(+), 82 deletions(-) · branch `main`_
-status: stub
+status: enriched
 
 ## 2026-09-24 19:24 · zapier-gallery · dc44ad5
-**What:** Fix screenshot capture on Vercel, default the skill CLI to prod
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** Fixed screenshot capture silently failing in production on Vercel, and pointed the companion submit-to-gallery CLI at the real deployed gallery URL by default.
+**Why it matters:** A serverless-only bug — `@sparticuz/chromium` loads its binary from disk at runtime, so Next's bundler was dropping it from the deployed bundle even though everything worked locally. The kind of failure that only shows up once something's actually live.
+**Shareable:** no — infra bugfix on an internal tool.
+**Tags:** #bugfix #infra #zapier
 _3 files changed, 18 insertions(+), 13 deletions(-) · branch `main`_
-status: stub
+status: enriched
 
 ## 2026-09-24 19:18 · zapier-gallery · 722b4ad
-**What:** Run prisma generate explicitly in the build script
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** Made the build script explicitly run `prisma generate` instead of relying on it firing automatically after install.
+**Why it matters:** Vercel skips postinstall scripts for packages it doesn't already trust, so the Prisma client was silently never generated and the build failed on a type check with no obvious cause. One-line fix once found.
+**Shareable:** no — build plumbing.
+**Tags:** #bugfix #infra #zapier
 _1 file changed, 1 insertion(+), 1 deletion(-) · branch `main`_
-status: stub
+status: enriched
 
-## 2026-09-24 19:09 · zapier-gallery · ffcd9e3
-**What:** Initial commit: prototype gallery app
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+## 2026-09-24 19:09 · zapier-gallery · ffcd9e3, 71a0fb9
+**What:** First commit of a new internal tool: a gallery for browsing Zapier prototype apps, submitted either through the site or a companion CLI/skill that posts straight from another repo.
+**Why it matters:** Gives scattered internal prototypes one shared, browsable home instead of living only in whichever repo built them.
+**Shareable:** no — internal Zapier tooling.
+**Tags:** #new-feature #infra #zapier
 _71 files changed, 11084 insertions(+) · branch `main`_
-status: stub
-
-## 2026-09-24 19:08 · zapier-gallery · 71a0fb9
-**What:** Initial commit: prototype gallery app
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
-_71 files changed, 11084 insertions(+) · branch `main`_
-status: stub
+status: enriched
 
 ## 2026-09-24 12:03 · harps-website · 8894e4e
-**What:** Ship Harps v0.4.4
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** Published the v0.4.4 changelog entry and updated the downloadable DMG on getharps.app.
+**Why it matters:** The changelog page is the paper trail for what "0.4.4" actually means to someone who isn't reading commits — see the paired voice-capture entry (`fbe222a`, same night) for the real fix.
+**Shareable:** no — the website side is just publishing; the fix itself is the story.
+**Tags:** #harps #dx
 _2 files changed, 7 insertions(+) · branch `main`_
-status: stub
+status: enriched
 
 ## 2026-09-24 12:02 · voice-capture · fbe222a
-**What:** Bump to v0.4.4: reuse a warm Foundation Models session for transforms
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** Fixed the real source of slow transcription in Harps: the on-device cleanup step (stripping filler words, tightening phrasing) now reuses one warmed-up AI session for the app's whole lifetime instead of spinning up a brand-new one on every single dictation.
+**Why it matters:** This is the second release in a row chasing the same root cause from a different angle (v0.4.3 fixed the speech model itself; this fixes the follow-up cleanup pass) — the kind of fix that doesn't show up as a new feature but is exactly what "feels fast" is made of.
+**Shareable:** no — a latency fix has no visual to show; would read better as a line in a "Harps got noticeably snappier" recap than its own post.
+**Tags:** #perf #bugfix #ai #harps
 _3 files changed, 51 insertions(+), 5 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
-status: stub
+status: enriched
 
 ## 2026-09-24 11:31 · harps-website · 8cb2f8e
-**What:** Ship Harps v0.4.3
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** Published the v0.4.3 changelog entry and updated the downloadable DMG.
+**Why it matters:** Pairs with the same-day voice-capture fix (`0333d85`) — see that entry for what actually changed.
+**Shareable:** no.
+**Tags:** #harps #dx
 _2 files changed, 7 insertions(+) · branch `main`_
-status: stub
+status: enriched
 
 ## 2026-09-24 11:31 · voice-capture · 0333d85
-**What:** Bump to v0.4.3: keep the speech model resident for the app's lifetime
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** Transcription is noticeably faster in Harps now — the on-device speech model stays loaded for the app's entire session instead of being torn down and rebuilt before every single capture.
+**Why it matters:** "Hold a key, speak, see text" only feels instant if nothing has to warm up in between; this removes a reload that was happening on literally every dictation.
+**Shareable:** no — a latency win, nothing new to look at.
+**Tags:** #perf #harps
 _2 files changed, 17 insertions(+), 2 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
-status: stub
+status: enriched
 
 ## 2026-09-23 10:14 · ztwalsh.com · c810a2f
 **What:** Rebuilt my personal site's whole look: black-and-white instead of
@@ -147,220 +139,188 @@ _7 files changed, 1136 insertions(+), 353 deletions(-) · branch `main`_
 status: enriched
 
 ## 2026-09-21 17:07 · harps-website · 551be5f
-**What:** Ship Harps v0.4.2
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** Published the v0.4.2 changelog entry and updated the downloadable DMG.
+**Why it matters:** Pairs with the same-day voice-capture fix (`d98224b`) — see that entry for the actual changes.
+**Shareable:** no.
+**Tags:** #harps #dx
 _2 files changed, 8 insertions(+) · branch `main`_
-status: stub
+status: enriched
 
 ## 2026-09-21 17:07 · voice-capture · d98224b
-**What:** Bump to v0.4.2: fix SpeechAnalyzer worker-reuse crash, stat card deltas
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** Fixed a crash that could hit shortly after finishing a recording, most noticeable on longer captures, and gave the Overview page's stat cards a red down-arrow when a number has dropped versus last week instead of showing nothing next to "vs last week."
+**Why it matters:** A crash right after you finish speaking is about the worst possible moment for one — it's exactly when you're about to paste the result somewhere. The stat-card fix is small but makes the dashboard actually readable at a glance instead of only half-telling the story.
+**Shareable:** yes — the stat cards showing the new red down-indicator next to a dropped number.
+**Tags:** #bugfix #ui #harps
 _4 files changed, 49 insertions(+), 22 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
-status: stub
+status: enriched
 
-## 2026-09-19 12:11 · harps-website · b345458
-**What:** Tweak changelog page lede copy
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+## 2026-09-19 12:11 · harps-website · b345458, 1b8c288
+**What:** Two quick rewrites of the one-line intro sentence at the top of the Harps changelog page, minutes apart, landing on "Keep up with Harps. There's always something new in the works."
+**Why it matters:** Just copy-tightening — the kind of pass where you write a line, read it back, and immediately try again.
+**Shareable:** no — too small to stand alone.
+**Tags:** #polish #content #harps
 _1 file changed, 1 insertion(+), 1 deletion(-) · branch `main`_
-status: stub
-
-## 2026-09-19 12:08 · harps-website · 1b8c288
-**What:** Tweak changelog page lede copy
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
-_1 file changed, 1 insertion(+), 1 deletion(-) · branch `main`_
-status: stub
+status: enriched
 
 ## 2026-09-19 12:03 · harps-website · ef452cc
-**What:** Ship Harps v0.4.1
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** Published the v0.4.1 changelog entry and updated the downloadable DMG.
+**Why it matters:** Pairs with the same-day voice-capture polish pass (`6ad904e`) — see that entry for what changed.
+**Shareable:** no.
+**Tags:** #harps #dx
 _2 files changed, 10 insertions(+) · branch `main`_
-status: stub
+status: enriched
 
 ## 2026-09-19 12:02 · voice-capture · 6ad904e
-**What:** Bump to v0.4.1: day-switch motion, Transforms editor polish
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** Switching between Today and other days in Harps' sidebar now animates instead of snapping instantly, added a Cancel button next to Save in the Transforms editor, gave the text area more breathing room, fixed wrapped bulleted/numbered list lines falling back to the left margin instead of indenting correctly, and polished the shape of the recent-captures refresh button.
+**Why it matters:** A pure polish pass — nothing new to do, everything a little more pleasant to look at and use, especially the day-switch animation and the list-indent fix, which was the kind of small "off" detail that's easy to walk past until it's fixed.
+**Shareable:** yes — the day-switch animation, and a wrapped list before/after (falling to the margin vs. indenting correctly).
+**Tags:** #polish #ui #motion #harps
 _5 files changed, 67 insertions(+), 6 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
-status: stub
+status: enriched
 
 ## 2026-09-19 08:10 · harps-website · 8d5414e
-**What:** Ship Harps v0.4.0
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** Published the v0.4.0 changelog entry and updated the downloadable DMG.
+**Why it matters:** Pairs with the same-day voice-capture release (`d3e8aca`) — see that entry for what changed.
+**Shareable:** no.
+**Tags:** #harps #dx
 _2 files changed, 10 insertions(+) · branch `main`_
-status: stub
+status: enriched
 
 ## 2026-09-19 08:10 · voice-capture · d3e8aca
-**What:** Bump to v0.4: manual refresh, crash fix, transform delete confirmation
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** Added a manual refresh button (on Overview and Today's Transcripts) to pull in captures recorded since the window was last opened, fixed a crash that could happen when starting a new capture while the previous one was still transcribing, made deleting a transform ask for confirmation instead of deleting immediately, and gave opening a transform a smooth transition instead of a hard cut.
+**Why it matters:** The refresh button and delete confirmation are both "I actually hit this while using my own app" fixes — a background recording's captures not showing up until something else nudged the view, and a one-click-undoable delete on something you spent time writing, are exactly the rough edges that make an app feel unfinished.
+**Shareable:** yes — the refresh button spinning as it pulls in new captures, and the delete-confirmation step on a transform.
+**Tags:** #new-feature #bugfix #ui #harps
 _8 files changed, 199 insertions(+), 63 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
-status: stub
+status: enriched
 
 ## 2026-09-19 07:20 · harps-website · 968edc3
-**What:** Move particle-background-demo into playground, link from index
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** Moved an old particle-background experiment out of the site's root and into its playground folder, with a link from the playground index.
+**Why it matters:** Housekeeping — keeping one-off visual experiments out of the way of the real site pages.
+**Shareable:** no.
+**Tags:** #dx #housekeeping
 _2 files changed, 5 insertions(+) · branch `main`_
-status: stub
+status: enriched
 
 ## 2026-09-19 07:17 · harps-website · 153f4f5
-**What:** Ship Harps v0.3.0
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** Published the v0.3.0 changelog entry and updated the downloadable DMG.
+**Why it matters:** Pairs with the same-day voice-capture release (`08133d5`) — see that entry for what changed.
+**Shareable:** no.
+**Tags:** #harps #dx
 _2 files changed, 10 insertions(+) · branch `main`_
-status: stub
+status: enriched
 
 ## 2026-09-19 07:16 · voice-capture · 08133d5
-**What:** Bump to v0.3: Transforms rich text editor, faster transcription, capsule fixes
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** Gave Harps' Transforms a real editor — a formatting toolbar (headings, bold, italic, code, lists) with both a clean Rich Text view and a raw Markdown view that stay in sync — made transcription noticeably faster by loading the speech model once at launch instead of rebuilding it before every capture, and fixed the transcribing indicator's animated dots plus the capture timer wrapping onto two lines on longer recordings.
+**Why it matters:** Transforms went from a plain textarea to an actual editor, which is the difference between writing a clean-up rule once and fighting raw Markdown syntax every time you tweak one.
+**Shareable:** yes — the Transforms rich-text toolbar, switching between Rich Text and Markdown views on the same rule.
+**Tags:** #new-feature #ui #ai #harps
 _7 files changed, 824 insertions(+), 43 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
-status: stub
+status: enriched
 
 ## 2026-09-19 06:49 · ticket-home-hero-generating-state · 9185f1c
-**What:** Add honest cold-start generating state to Home hero
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** Cold-start on cardio-tracking's Home hero (no cached headline yet) now shows a shimmer-pulsed skeleton with honest "generating" copy for the headline and theme chips, instead of a static fallback line dressed up as a finished insight. Warm starts still show cached content instantly, and generated headlines now actually get cached so warm starts stay reachable across launches.
+**Why it matters:** A static placeholder that looks like a real insight is a small lie — this makes "the app is thinking" visibly true instead of quietly faking a finished thought while the model runs.
+**Shareable:** yes — the shimmer skeleton state, side by side with the instant warm-start version.
+**Tags:** #ui #polish #ai
 _1 file changed, 108 insertions(+), 14 deletions(-) · branch `worktree-ticket-home-hero-generating-state`_
-status: stub
+status: enriched
 
 ## 2026-09-18 16:38 · ticket-home-hero-period-comparison · 8665241
-**What:** Add month-over-month comparison to Home hero headline
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** Cardio-tracking's Home hero headline can now name a real month-over-month comparison ("more runs than last month," etc.) when there's enough data in the prior window — grounded only in totals and mood mix, never a specific theme or note-level claim about the previous period, and never raw numbers in the headline text itself.
+**Why it matters:** A single-window summary ("you ran 5 times") is less interesting than one that knows whether that's up or down from before — this is what turns the hero into something closer to an actual insight instead of a fact restated.
+**Shareable:** yes — the before/after headline copy: single-window summary vs. a real comparison line.
+**Tags:** #new-feature #ai
 _2 files changed, 108 insertions(+), 7 deletions(-) · branch `worktree-ticket-home-hero-period-comparison`_
-status: stub
+status: enriched
 
 ## 2026-09-18 16:23 · cardio-tracking · f5608b3
-**What:** Add insights hero iteration tickets (freshness, comparison, loading state)
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** Wrote three tickets scoping the next round of Home hero work: a freshness/cache-invalidation fix, the month-over-month comparison, and the honest generating-state skeleton — the three that shipped over the following day (see the entries above and below).
+**Why it matters:** Planning, not a feature — the paper trail for how one ticket queue became three shipped fixes in under 24 hours.
+**Shareable:** no.
+**Tags:** #dx #infra
 _3 files changed, 238 insertions(+) · branch `main-sync`_
-status: stub
+status: enriched
 
 ## 2026-09-18 16:22 · queue-main · 909a0dc
-**What:** Fix ticket status: restore review/PR link after erroneous re-lock
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** Fixed the ticket queue's own bookkeeping — a ticket had gotten erroneously re-locked, which wiped its review status and PR link; restored both.
+**Why it matters:** Internal tooling housekeeping — keeping the ticket queue's own state honest so it doesn't lose track of work that's actually done.
+**Shareable:** no.
+**Tags:** #dx #infra
 _1 file changed, 3 insertions(+), 1 deletion(-) · branch `queue-main-snapshot`_
-status: stub
+status: enriched
 
-## 2026-09-18 14:23 · ticket-home-hero-freshness-cache-invalidation · b32b57e
-**What:** Fold in-window run data into Home hero cache key, not just month boundary
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
-_2 files changed, 32 insertions(+), 9 deletions(-) · branch `worktree-ticket-home-hero-freshness-cache-invalidation`_
-status: stub
-
-## 2026-09-18 13:57 · ticket-home-hero-freshness-cache-invalidation · fb34328
-**What:** Invalidate Home hero cache when in-window run data changes, not just on month rollover
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
-_2 files changed, 30 insertions(+), 10 deletions(-) · branch `worktree-ticket-home-hero-freshness-cache-invalidation`_
-status: stub
+## 2026-09-18 14:23 · ticket-home-hero-freshness-cache-invalidation · b32b57e, fb34328
+**What:** Fixed cardio-tracking's Home hero cache so it regenerates the headline/theme summary whenever runs, notes, or moods change inside the current rolling window — not only when the calendar month rolls over, which was the only thing that used to bust the cache.
+**Why it matters:** Before this, logging a new run (or editing an old one's notes) didn't change the hero's summary at all until the next month started — the headline could sit stale, quietly describing data that had since changed. Two commits on the same ticket: an initial fingerprint-based fix, then a same-day refinement to how that fingerprint is computed.
+**Shareable:** no — a correctness/cache fix with nothing new to look at, though it's the reason the comparison and generating-state features above actually stay accurate.
+**Tags:** #bugfix #ai
+_2 commits, ~62 insertions / 19 deletions across InsightRange.swift · branch `worktree-ticket-home-hero-freshness-cache-invalidation`_
+status: enriched
 
 ## 2026-09-17 22:54 · harps-website · 22c3191
-**What:** Ship Harps v0.2.0
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** Published the v0.2.0 changelog entry and updated the downloadable DMG.
+**Why it matters:** Pairs with the same-day voice-capture release (`370f3b5`) — see that entry for what changed. This is the release that introduced Transforms, so it's the more interesting half of the pair.
+**Shareable:** no — website-side publishing only.
+**Tags:** #harps #dx
 _2 files changed, 11 insertions(+) · branch `main`_
-status: stub
+status: enriched
 
 ## 2026-09-17 22:53 · voice-capture · 370f3b5
-**What:** Bump to v0.2: Transforms feature, hotkey mode setting, Dock/menu-bar fixes
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** Added Transforms to Harps — on-device text clean-up rules that apply automatically as you dictate, shipping with a General Clean-up default and support for writing your own — plus a hotkey mode setting (hold-to-record or press-to-toggle), a fix so clicking the Dock/Applications icon reliably opens the dashboard and switches the menu bar even across multiple displays and Spaces, a freely resizable sidebar with icons, and a round of copy/delete interaction polish (hover states, a copy confirmation, a Cancel/Delete step before deleting a capture).
+**Why it matters:** Transforms is the headline feature of this release — it's the difference between "transcribe exactly what I said" and "transcribe what I meant," entirely on-device. Everything else in this release is the app catching up to feeling reliable around it (opening reliably from the Dock, a sidebar that fits your screen).
+**Shareable:** yes — Transforms actually cleaning up a dictated sentence (filler words removed, phrasing tightened) as the headline moment, plus the resizable sidebar.
+**Tags:** #new-feature #ui #harps
 _41 files changed, 2544 insertions(+), 85 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
-status: stub
+status: enriched
 
-## 2026-09-17 21:36 · harps-website · 10ef374
-**What:** Add changelog page, move Privacy/Changelog links to footer
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+## 2026-09-17 21:36 · harps-website · 10ef374, 0287d77
+**What:** Added a real changelog page to getharps.app and moved the Privacy/Changelog links out of the header and into the footer.
+**Why it matters:** Gives the site a public paper trail of what's shipped, matching the version-bump cadence the app itself was already on. (Two identical SHAs from the same commit attempt — merged into one entry.)
+**Shareable:** no — site plumbing.
+**Tags:** #new-feature #harps #web
 _3 files changed, 178 insertions(+), 1 deletion(-) · branch `main`_
-status: stub
-
-## 2026-09-17 21:36 · harps-website · 0287d77
-**What:** Add changelog page, move Privacy/Changelog links to footer
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
-_3 files changed, 178 insertions(+), 1 deletion(-) · branch `main`_
-status: stub
+status: enriched
 
 ## 2026-09-17 15:30 · assistant · c771b9f
-**What:** Add meeting notes: Growth Zone Leads AMA With Jenica Arvind and Zach
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
-_1 file changed, 269 insertions(+) · branch `main`_
-status: stub
+**What:** Imported meeting notes from a Growth Zone Leads AMA into the assistant project.
+**Why it matters:** Housekeeping — feeding the assistant real meeting context to work from, not a feature.
+**Shareable:** no.
+**Tags:** #housekeeping
+_1 file changed, 269 insertions(+) · branch `main`_ _(reconstructed from commit metadata — repo/SHA not locally reachable)_
+status: enriched
 
 ## 2026-09-17 13:47 · assistant · 81c2d66
-**What:** Add meeting notes: Todd Zach Skip 1-1, Gwen Zach 1-1, Cece Zach 1-1, Post Build All-Hands Q&A Session 1
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
-_4 files changed, 1524 insertions(+) · branch `main`_
-status: stub
+**What:** Imported four more meeting transcripts (three 1-1s and a Post Build All-Hands Q&A) into the assistant project.
+**Why it matters:** Housekeeping — same as the entry above.
+**Shareable:** no.
+**Tags:** #housekeeping
+_4 files changed, 1524 insertions(+) · branch `main`_ _(reconstructed from commit metadata — repo/SHA not locally reachable)_
+status: enriched
 
 ## 2026-09-16 22:19 · harps-website · b75cbac
-**What:** Update download to the new icon/DMG-background build
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** Swapped the site's downloadable DMG for the first public build — the one with Harps' real icon and a designed installer background, matching changelog v0.1.0 ("First public build of the Harps DMG, with the new icon and installer background").
+**Why it matters:** This is the DMG a stranger actually double-clicks — the difference between a generic installer window and one that looks like it belongs to a finished app.
+**Shareable:** yes — the DMG installer window with the real icon and background art.
+**Tags:** #polish #ui #harps
 _1 file changed, 0 insertions(+), 0 deletions(-) · branch `main`_
-status: stub
+status: enriched
 
-## 2026-09-16 22:14 · ztwalsh.com · bc563a3
-**What:** Swap icons to Hugeicons, move Harps to top of experiments
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+## 2026-09-16 22:14 · ztwalsh.com · bc563a3, e25711e
+**What:** Swapped the personal site's icon set over to Hugeicons and moved Harps to the top of the experiments list.
+**Why it matters:** Harps had become the thing actually worth leading with on the experiments page, and a consistent icon set is the kind of detail that makes a personal site's "experiments" list feel curated rather than accumulated. (Two identical SHAs — merged into one entry.)
+**Shareable:** yes — before/after of the experiments list icons, plus Harps now at the top.
+**Tags:** #polish #ui #design
 _3 files changed, 39 insertions(+), 18 deletions(-) · branch `main`_
-status: stub
-
-## 2026-09-16 22:14 · ztwalsh.com · e25711e
-**What:** Swap icons to Hugeicons, move Harps to top of experiments Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
-_3 files changed, 39 insertions(+), 18 deletions(-) · branch `main`_
-status: stub
+status: enriched
 
 ## 2026-09-16 14:37 · assistant · 6a84d1a
-**What:** Add meeting notes: Callie Zach Skip 1-1, Commerce Growth Zone Merger AMA, Monthly Design and Research Roundtable
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
-_8 files changed, 1966 insertions(+) · branch `main`_
-status: stub
+**What:** Imported eight more meeting transcripts (a skip 1-1, a Growth Zone merger AMA, a design/research roundtable) into the assistant project.
+**Why it matters:** Housekeeping — same as the other meeting-note import entries this week.
+**Shareable:** no.
+**Tags:** #housekeeping
+_8 files changed, 1966 insertions(+) · branch `main`_ _(reconstructed from commit metadata — repo/SHA not locally reachable)_
+status: enriched
 
 ## 2026-09-13 21:47 · harps-website · f0ac4fe
 **What:** Wired up Google Analytics on the marketing site and rewrote the privacy page's "This website" section, which had previously stated outright that there was no analytics on the site — now it accurately discloses what GA collects (cookies, standard visit data like pages viewed and device/browser type) and makes explicit that the actual Mac app is unaffected and still has zero telemetry or connection to Google.
