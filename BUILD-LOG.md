@@ -16,6 +16,22 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-28 22:48 · harps-website · abec0c5
+**What:** The two "Download for Mac" buttons on getharps.app now report clicks to Google Analytics, each labeled with where it sits (header vs. pricing section), so downloads can be counted and the two buttons compared.
+**Why it matters:** GA's automatic download tracking doesn't recognize .dmg files, so until now there was no way to know how many people actually downloaded the app from the site. Small instrumentation, but it's the first real signal on whether the site converts.
+**Shareable:** no
+**Tags:** #analytics #harps #instrumentation
+_2 files changed, 12 insertions(+), 2 deletions(-) · branch `main`_
+status: enriched
+
+## 2026-09-28 22:46 · voice-capture · b167656
+**What:** Group Settings/Transforms into bordered iOS-style card containers
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_3 files changed, 143 insertions(+), 49 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
+status: stub
+
 ## 2026-09-28 22:44 · cardio-tracking-website · 647bad8
 **What:** Hooked movethink.app up to Google Analytics, and added a short "This website" section to the privacy policy saying that the site (not the app) counts visits, and that none of it is tied to an account.
 **Why it matters:** First time the Move/Think landing page can show whether anyone is actually visiting ahead of launch. Doing the disclosure in the same commit keeps the "the app doesn't track you" promise honest, since the tracking stays on the marketing site.
