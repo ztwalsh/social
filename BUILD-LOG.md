@@ -16,6 +16,86 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-28 22:28 · harps-website · 99e65b7
+**What:** Moved getharps.app's Google Analytics tag over to a fresh, dedicated Harps property, so visits to the site now show up alongside the rest of Zachary's GA accounts instead of in a stray property nobody could find.
+**Why it matters:** Housekeeping — the old tag pointed at a property of unknown whereabouts, so site traffic was effectively invisible. Minor plumbing, not post material on its own.
+**Shareable:** no
+**Tags:** #analytics #housekeeping #harps
+_3 files changed, 6 insertions(+), 6 deletions(-) · branch `main`_
+status: enriched
+
+## 2026-09-28 22:00 · zapier-gallery · 5559db4
+**What:** Add Okta login, require it for submissions and activity updates
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_15 files changed, 195 insertions(+), 82 deletions(-) · branch `main`_
+status: stub
+
+## 2026-09-24 19:24 · zapier-gallery · dc44ad5
+**What:** Fix screenshot capture on Vercel, default the skill CLI to prod
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_3 files changed, 18 insertions(+), 13 deletions(-) · branch `main`_
+status: stub
+
+## 2026-09-24 19:18 · zapier-gallery · 722b4ad
+**What:** Run prisma generate explicitly in the build script
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_1 file changed, 1 insertion(+), 1 deletion(-) · branch `main`_
+status: stub
+
+## 2026-09-24 19:09 · zapier-gallery · ffcd9e3
+**What:** Initial commit: prototype gallery app
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_71 files changed, 11084 insertions(+) · branch `main`_
+status: stub
+
+## 2026-09-24 19:08 · zapier-gallery · 71a0fb9
+**What:** Initial commit: prototype gallery app
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_71 files changed, 11084 insertions(+) · branch `main`_
+status: stub
+
+## 2026-09-24 12:03 · harps-website · 8894e4e
+**What:** Ship Harps v0.4.4
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_2 files changed, 7 insertions(+) · branch `main`_
+status: stub
+
+## 2026-09-24 12:02 · voice-capture · fbe222a
+**What:** Bump to v0.4.4: reuse a warm Foundation Models session for transforms
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_3 files changed, 51 insertions(+), 5 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
+status: stub
+
+## 2026-09-24 11:31 · harps-website · 8cb2f8e
+**What:** Ship Harps v0.4.3
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_2 files changed, 7 insertions(+) · branch `main`_
+status: stub
+
+## 2026-09-24 11:31 · voice-capture · 0333d85
+**What:** Bump to v0.4.3: keep the speech model resident for the app's lifetime
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_2 files changed, 17 insertions(+), 2 deletions(-) · branch `claude/mac-voice-capture-app-fdpi64`_
+status: stub
+
 ## 2026-09-23 10:14 · ztwalsh.com · c810a2f
 **What:** Rebuilt my personal site's whole look: black-and-white instead of
 green-and-gold, and the entire page now renders through a real WebGL CRT
