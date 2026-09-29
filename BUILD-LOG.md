@@ -16,6 +16,22 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-29 15:13 · harps-website · b282f52
+**What:** Added automatic style checks to the Harps site: a linter that rejects any color, font size or animation curve that isn't one of the site's design tokens, and a formatter for the HTML. This was the first change to go through the new AI code-reviewer, and it failed my work twice before passing — first because the formatter would have rewritten files it was told to leave alone, then because it would have silently deleted the explanatory comments at the top of ten components.
+**Why it matters:** The design tokens from yesterday are now enforced by a machine, not memory. And the reviewer earned its keep immediately: both catches were things I'd have shipped. The one-time formatting pass was verified pixel-for-pixel — zero pixels changed on any page.
+**Shareable:** yes — pairs with the code-reviewer post: "its first gated ticket, it failed me twice, both times correctly"
+**Tags:** #tooling #linting #ai-tools #code-review #harps
+_8 files changed, 1852 insertions(+), 40 deletions(-) · branch `main`_
+status: enriched
+
+## 2026-09-29 15:11 · zapier-gallery · 57e8d6f
+**What:** Add tickets for remaining Okta and screenshot-bypass work
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_3 files changed, 124 insertions(+) · branch `main`_
+status: stub
+
 ## 2026-09-29 15:02 · harps-website · 9ecba96
 **What:** Built a reusable AI code-reviewer that judges changes only against a project's own written rules (its design doc), not generic best practices — saved as a universal tool that can be dropped into any project, and installed first on the Harps site. To prove it worked, I fed it a deliberately sloppy change (it failed it, citing every broken rule) and then one of my own real commits from an hour earlier — which it also failed, correctly: the design doc I'd just written made a claim the site didn't back up.
 **Why it matters:** The reviewer's very first real review caught a mistake I'd shipped and missed. A reviewer that only cites rules a human wrote down is one you can actually trust to block things — and now every future change to the site gets checked before it lands.
