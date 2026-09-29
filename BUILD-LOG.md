@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-29 08:57 · harps-website · 46cd4cc
+**What:** Swapped getharps.app onto a brand-new Google Analytics tag after the previous one turned out to be dead on Google's side — Google refused to serve its script (404) even though it happily serves one for made-up IDs. Visits are now confirmed reaching GA.
+**Why it matters:** A day of "No data received" had nothing to do with the site; the tag ID itself was broken upstream. Mostly plumbing, though the debugging trick (compare the real ID against a fake one) is a mildly useful tip.
+**Shareable:** no
+**Tags:** #analytics #debugging #harps
+_3 files changed, 6 insertions(+), 6 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-09-28 22:48 · harps-website · abec0c5
 **What:** The two "Download for Mac" buttons on getharps.app now report clicks to Google Analytics, each labeled with where it sits (header vs. pricing section), so downloads can be counted and the two buttons compared.
 **Why it matters:** GA's automatic download tracking doesn't recognize .dmg files, so until now there was no way to know how many people actually downloaded the app from the site. Small instrumentation, but it's the first real signal on whether the site converts.
