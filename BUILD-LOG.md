@@ -40,7 +40,7 @@ status: enriched
 _13 files changed, 26 insertions(+), 6 deletions(-) · branch `main`_
 status: enriched
 
-## 2026-09-29 15:13 · harps-website · b282f52
+## 2026-09-29 15:13 · harps-website · b282f52 · 463aac2
 **What:** Added automatic style checks to the Harps site: a linter that rejects any color, font size or animation curve that isn't one of the site's design tokens, and a formatter for the HTML. This was the first change to go through the new AI code-reviewer, and it failed my work twice before passing — first because the formatter would have rewritten files it was told to leave alone, then because it would have silently deleted the explanatory comments at the top of ten components.
 **Why it matters:** The design tokens from yesterday are now enforced by a machine, not memory. And the reviewer earned its keep immediately: both catches were things I'd have shipped. The one-time formatting pass was verified pixel-for-pixel — zero pixels changed on any page.
 **Shareable:** yes — pairs with the code-reviewer post: "its first gated ticket, it failed me twice, both times correctly"
