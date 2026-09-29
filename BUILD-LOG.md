@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-29 09:43 · harps-website · 0560c60
+**What:** Gave getharps.app a real design-token system: a single type scale, named motion curves and durations, and shared layout widths and section spacing, with every component pointing at them. Along the way, 21 different font sizes in use on a three-page site collapsed to 13 — most of the extras were half-pixel near-duplicates like 13 vs 13.5.
+**Why it matters:** "21 font sizes on a 3-page site" is a relatable kind of drift — nobody chose it, it just accumulated one tweak at a time. Now a new page picks from a short list instead of eyeballing a number.
+**Shareable:** yes — "counted the font sizes on my tiny site: 21" angle
+**Tags:** #design-systems #tokens #harps #web #css
+_13 files changed, 116 insertions(+), 64 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-09-29 09:38 · harps-website · 758be6f
 **What:** The Harps changelog page now has its release notes baked into the page when the site is built, instead of loading them with JavaScript after the page opens.
 **Why it matters:** The page no longer flashes empty, search engines can actually read the release notes, and there's no "couldn't load" failure state. Small follow-on to the Astro move — plumbing, not a post on its own.
