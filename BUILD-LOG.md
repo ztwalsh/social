@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-29 17:01 · harps-website · 81c0466
+**What:** The animated hero on getharps.app (the drifting particles and the looping voice-capture demo) now stops when you scroll past it or switch tabs, and picks up exactly where it left off when you come back.
+**Why it matters:** Both animations were running forever in the background, eating CPU and battery on a page most people scroll straight past — on laptops, which is the entire audience for a Mac app. The subtle part: simply pausing the demo would have made it jump ahead and break when resumed, so its internal clock pauses too.
+**Shareable:** maybe — a short "your hero animation is probably still running after you scroll past it" tip, with the before/after CPU numbers
+**Tags:** #perf #animation #harps #web
+_5 files changed, 72 insertions(+), 7 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-09-29 16:51 · harps-website · 8f3e8d9
 **What:** Switched getharps.app's fonts to the compressed web format, cutting them from 133 KB to 56 KB, and told the browser to show text immediately and fetch the two most-used weights first. Rendering is pixel-identical to before.
 **Why it matters:** Faster first paint, no invisible-text flash while fonts load. Standard web hygiene — not post material on its own.
