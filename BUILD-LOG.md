@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-29 14:49 · harps-website · 911e890
+**What:** Settled three small design questions the new design doc had flagged on getharps.app: the home page's sections and footer now line up exactly with the header (they'd been sitting 8px off), two color tokens that were secretly the same color became one, and the accent color keeps its "live" name on purpose.
+**Why it matters:** Writing the design doc down is what surfaced the misalignment — an 8px drift nobody had noticed. Small polish; a nice footnote to the design-doc story rather than its own post.
+**Shareable:** no
+**Tags:** #polish #design-systems #harps
+_7 files changed, 27 insertions(+), 31 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-09-29 10:03 · harps-website · cfc2dee
 **What:** Rewrote the Harps website's design doc to describe the site as it actually is — it had still been describing an earlier light, red-accented version. It now covers the real palette, the new type/motion/layout tokens, every component, the coding rules learned the hard way this week, and a step-by-step recipe for adding a page (tested by building a throwaway page from it).
 **Why it matters:** This doc is what future work — including automated reviewers — gets checked against. A design doc that describes a site that no longer exists is worse than none. Internal, not post material on its own.
