@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-28 22:44 · cardio-tracking-website · 647bad8
+**What:** Hooked movethink.app up to Google Analytics, and added a short "This website" section to the privacy policy saying that the site (not the app) counts visits, and that none of it is tied to an account.
+**Why it matters:** First time the Move/Think landing page can show whether anyone is actually visiting ahead of launch. Doing the disclosure in the same commit keeps the "the app doesn't track you" promise honest, since the tracking stays on the marketing site.
+**Shareable:** no (plumbing; pairs with the harps GA cleanup from the same night if there's ever an "analytics housekeeping" post)
+**Tags:** #analytics #privacy #movethink #web
+_2 files changed, 28 insertions(+), 1 deletion(-) · branch `main`_
+status: enriched
+
 ## 2026-09-28 22:38 · harps-website · 9ddd20e
 **What:** First cleanup pass on getharps.app after a full code audit: fixed a privacy contact address that bounced and a footer linking the wrong domain, added a favicon and link-preview tags, and stopped old prototypes and internal docs from being publicly viewable. Also wrote a 10-ticket plan to move the site onto Astro with shared layouts so new pages stop being copy-paste.
 **Why it matters:** The audit turned up real bugs hiding in a "finished" site — anyone emailing about privacy was getting a bounce. The bigger story is the plan: a three-page static site had already drifted into three slightly different copies of the same header and animations, which is the moment to fix structure before adding more pages.
