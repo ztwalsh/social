@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-29 09:38 · harps-website · 758be6f
+**What:** The Harps changelog page now has its release notes baked into the page when the site is built, instead of loading them with JavaScript after the page opens.
+**Why it matters:** The page no longer flashes empty, search engines can actually read the release notes, and there's no "couldn't load" failure state. Small follow-on to the Astro move — plumbing, not a post on its own.
+**Shareable:** no
+**Tags:** #astro #harps #web #seo
+_2 files changed, 51 insertions(+), 57 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-09-29 09:16 · harps-website · f8aa199, 144276e
 **What:** Moved getharps.app from hand-copied HTML files onto Astro: every page now shares one layout for its head, analytics, header and footer, so a new page is a small file instead of a copy-paste of the last one. The home page followed: its hero animation, feature grid, stepper, and pricing card are now reusable components, and the Download button carries its own click tracking. Verified with a pixel-by-pixel screenshot diff against the live site — which turned up a real bug: headings on the inner pages had been stuck a few pixels short of where their entrance animation should land, on the live site, for everyone.
 **Why it matters:** The site only has three pages and they'd already drifted into three slightly different copies of the same code. Fixing structure before adding more pages is the cheap moment. The pixel diff catching a live bug nobody had noticed is the fun part.
