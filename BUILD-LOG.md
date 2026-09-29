@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-29 15:02 · harps-website · 9ecba96
+**What:** Built a reusable AI code-reviewer that judges changes only against a project's own written rules (its design doc), not generic best practices — saved as a universal tool that can be dropped into any project, and installed first on the Harps site. To prove it worked, I fed it a deliberately sloppy change (it failed it, citing every broken rule) and then one of my own real commits from an hour earlier — which it also failed, correctly: the design doc I'd just written made a claim the site didn't back up.
+**Why it matters:** The reviewer's very first real review caught a mistake I'd shipped and missed. A reviewer that only cites rules a human wrote down is one you can actually trust to block things — and now every future change to the site gets checked before it lands.
+**Shareable:** yes — "my new AI reviewer's first real catch was my own commit" angle
+**Tags:** #ai-tools #code-review #claude-code #harps #workflow
+_11 files changed, 122 insertions(+), 20 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-09-29 14:49 · harps-website · 911e890
 **What:** Settled three small design questions the new design doc had flagged on getharps.app: the home page's sections and footer now line up exactly with the header (they'd been sitting 8px off), two color tokens that were secretly the same color became one, and the accent color keeps its "live" name on purpose.
 **Why it matters:** Writing the design doc down is what surfaced the misalignment — an 8px drift nobody had noticed. Small polish; a nice footnote to the design-doc story rather than its own post.
