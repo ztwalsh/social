@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-29 16:51 · harps-website · 8f3e8d9
+**What:** Switched getharps.app's fonts to the compressed web format, cutting them from 133 KB to 56 KB, and told the browser to show text immediately and fetch the two most-used weights first. Rendering is pixel-identical to before.
+**Why it matters:** Faster first paint, no invisible-text flash while fonts load. Standard web hygiene — not post material on its own.
+**Shareable:** no
+**Tags:** #perf #fonts #harps #web
+_13 files changed, 26 insertions(+), 6 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-09-29 15:13 · harps-website · b282f52
 **What:** Added automatic style checks to the Harps site: a linter that rejects any color, font size or animation curve that isn't one of the site's design tokens, and a formatter for the HTML. This was the first change to go through the new AI code-reviewer, and it failed my work twice before passing — first because the formatter would have rewritten files it was told to leave alone, then because it would have silently deleted the explanatory comments at the top of ten components.
 **Why it matters:** The design tokens from yesterday are now enforced by a machine, not memory. And the reviewer earned its keep immediately: both catches were things I'd have shipped. The one-time formatting pass was verified pixel-for-pixel — zero pixels changed on any page.
