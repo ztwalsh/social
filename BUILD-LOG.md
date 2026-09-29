@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-29 10:03 · harps-website · cfc2dee
+**What:** Rewrote the Harps website's design doc to describe the site as it actually is — it had still been describing an earlier light, red-accented version. It now covers the real palette, the new type/motion/layout tokens, every component, the coding rules learned the hard way this week, and a step-by-step recipe for adding a page (tested by building a throwaway page from it).
+**Why it matters:** This doc is what future work — including automated reviewers — gets checked against. A design doc that describes a site that no longer exists is worse than none. Internal, not post material on its own.
+**Shareable:** no
+**Tags:** #docs #design-systems #harps
+_2 files changed, 217 insertions(+), 67 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-09-29 09:43 · harps-website · 0560c60
 **What:** Gave getharps.app a real design-token system: a single type scale, named motion curves and durations, and shared layout widths and section spacing, with every component pointing at them. Along the way, 21 different font sizes in use on a three-page site collapsed to 13 — most of the extras were half-pixel near-duplicates like 13 vs 13.5.
 **Why it matters:** "21 font sizes on a 3-page site" is a relatable kind of drift — nobody chose it, it just accumulated one tweak at a time. Now a new page picks from a short list instead of eyeballing a number.
