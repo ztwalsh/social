@@ -16,8 +16,8 @@ Entry format lives in
 
 <!-- entries below -->
 
-## 2026-09-29 09:16 · harps-website · f8aa199
-**What:** Moved getharps.app from hand-copied HTML files onto Astro: every page now shares one layout for its head, analytics, header and footer, so a new page is a small file instead of a copy-paste of the last one. Verified with a pixel-by-pixel screenshot diff against the live site — which turned up a real bug: headings on the inner pages had been stuck a few pixels short of where their entrance animation should land, on the live site, for everyone.
+## 2026-09-29 09:16 · harps-website · f8aa199, 144276e
+**What:** Moved getharps.app from hand-copied HTML files onto Astro: every page now shares one layout for its head, analytics, header and footer, so a new page is a small file instead of a copy-paste of the last one. The home page followed: its hero animation, feature grid, stepper, and pricing card are now reusable components, and the Download button carries its own click tracking. Verified with a pixel-by-pixel screenshot diff against the live site — which turned up a real bug: headings on the inner pages had been stuck a few pixels short of where their entrance animation should land, on the live site, for everyone.
 **Why it matters:** The site only has three pages and they'd already drifted into three slightly different copies of the same code. Fixing structure before adding more pages is the cheap moment. The pixel diff catching a live bug nobody had noticed is the fun part.
 **Shareable:** yes — "screenshot-diffed my own site during a migration and found a bug that was already live" angle
 **Tags:** #astro #refactor #harps #web #testing
