@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-28 22:38 · harps-website · 9ddd20e
+**What:** First cleanup pass on getharps.app after a full code audit: fixed a privacy contact address that bounced and a footer linking the wrong domain, added a favicon and link-preview tags, and stopped old prototypes and internal docs from being publicly viewable. Also wrote a 10-ticket plan to move the site onto Astro with shared layouts so new pages stop being copy-paste.
+**Why it matters:** The audit turned up real bugs hiding in a "finished" site — anyone emailing about privacy was getting a bounce. The bigger story is the plan: a three-page static site had already drifted into three slightly different copies of the same header and animations, which is the moment to fix structure before adding more pages.
+**Shareable:** yes — "I audited my own tiny marketing site and found a dead contact email" angle; capture the ticket list and before/after of the browser tab favicon
+**Tags:** #audit #cleanup #harps #web #astro
+_15 files changed, 237 insertions(+), 5 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-09-28 22:28 · harps-website · 99e65b7
 **What:** Moved getharps.app's Google Analytics tag over to a fresh, dedicated Harps property, so visits to the site now show up alongside the rest of Zachary's GA accounts instead of in a stray property nobody could find.
 **Why it matters:** Housekeeping — the old tag pointed at a property of unknown whereabouts, so site traffic was effectively invisible. Minor plumbing, not post material on its own.
