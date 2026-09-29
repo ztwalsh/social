@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-09-29 17:05 · harps-website · 8fe361b (+ voice-capture ccc7103)
+**What:** Harps downloads now come from GitHub Releases instead of a file checked into the website's code. The site's Download buttons point at "latest release", and the app's release process now publishes each new version as a proper GitHub release with its notes — the first one, 0.4.4, is up.
+**Why it matters:** Every release used to add another 1.6 MB copy of the app to the website's repository forever. Now releases are versioned, have their own page and notes, and the site automatically serves whichever is newest. Old download links still work.
+**Shareable:** no — plumbing, though the public release page is a nice thing to link when announcing the next version
+**Tags:** #release #github #harps #infra
+_9 files changed, 51 insertions(+), 17 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-09-29 17:01 · harps-website · 81c0466
 **What:** The animated hero on getharps.app (the drifting particles and the looping voice-capture demo) now stops when you scroll past it or switch tabs, and picks up exactly where it left off when you come back.
 **Why it matters:** Both animations were running forever in the background, eating CPU and battery on a page most people scroll straight past — on laptops, which is the entire audience for a Mac app. The subtle part: simply pausing the demo would have made it jump ahead and break when resumed, so its internal clock pauses too.
