@@ -16,6 +16,102 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-10-05 15:50 · zapier-gallery · cce6584
+**What:** Put the tile edit icon on the title row
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_2 files changed, 4 insertions(+), 5 deletions(-) · branch `main`_
+status: stub
+
+## 2026-10-05 15:47 · zapier-gallery · 3f36f22
+**What:** Add a tag search and a pencil icon on gallery tiles
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_5 files changed, 54 insertions(+), 17 deletions(-) · branch `main`_
+status: stub
+
+## 2026-10-05 15:45 · zapier-gallery · cff5483
+**What:** Show selected tags as highlighted chips instead of checkboxes
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_1 file changed, 8 insertions(+), 1 deletion(-) · branch `main`_
+status: stub
+
+## 2026-10-05 15:38 · zapier-gallery · bf4ed65
+**What:** Hover cards, edit pages, archive, custom screenshot URL, adopted tags
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_18 files changed, 347 insertions(+), 286 deletions(-) · branch `main`_
+status: stub
+
+## 2026-10-01 15:56 · zapier-gallery · 8a359b8
+**What:** Skip the Okta gate until real credentials are wired in
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_8 files changed, 81 insertions(+), 32 deletions(-) · branch `main`_
+status: stub
+
+## 2026-10-01 15:49 · zapier-gallery · 0ecbfb4
+**What:** Switch Prisma to the pg driver adapter
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_4 files changed, 174 insertions(+), 10 deletions(-) · branch `main`_
+status: stub
+
+## 2026-10-01 15:39 · zapier-gallery · 563d2e0
+**What:** Close out the screenshot-bypass tickets with what actually shipped
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_2 files changed, 69 insertions(+), 9 deletions(-) · branch `main`_
+status: stub
+
+## 2026-10-01 15:38 · zapier-gallery · 1a2d9de
+**What:** Point submit-to-gallery at design-gallery by default, fix docs
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_2 files changed, 40 insertions(+), 16 deletions(-) · branch `main`_
+status: stub
+
+## 2026-10-01 15:35 · zapier-gallery · 54a51c1
+**What:** Accept a pre-captured screenshot, capture it locally in the CLI
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_3 files changed, 91 insertions(+), 9 deletions(-) · branch `main`_
+status: stub
+
+## 2026-10-01 07:51 · zapier-gallery · c551168
+**What:** Present our OIDC identity when capturing screenshots
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_1 file changed, 9 insertions(+) · branch `main`_
+status: stub
+
+## 2026-09-30 13:08 · assistant · 0fa3a07
+**What:** Add meeting notes: Extended Leadership Team Weekly, Build Operating System Review, Zone Leads Weekly Sync, Agent Experience Evals and Metrics Bootcamp, Jon Zach Skip 1-1, Mindy Zach 1-1, Chris Zach Skip 1-1
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_16 files changed, 4446 insertions(+) · branch `main`_
+status: stub
+
+## 2026-09-29 17:13 · zapier-gallery · 45d55fd
+**What:** Support Vercel Deployment Protection bypass in the submit-to-gallery CLI
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_2 files changed, 20 insertions(+), 1 deletion(-) · branch `main`_
+status: stub
+
 ## 2026-09-29 17:05 · harps-website + voice-capture · 8fe361b · ccc7103
 **What:** Harps downloads now come from GitHub Releases instead of a file checked into the website's code. The site's Download buttons point at "latest release", and the app's release process now publishes each new version as a proper GitHub release with its notes — the first one, 0.4.4, is up.
 **Why it matters:** Every release used to add another 1.6 MB copy of the app to the website's repository forever. Now releases are versioned, have their own page and notes, and the site automatically serves whichever is newest. Old download links still work.
