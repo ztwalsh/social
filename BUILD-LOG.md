@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-10-06 18:04 · harps-website · 5829e15
+**What:** Fixed a font-loading race in the Harps hero animation: the voice capsule measured its own width before the site's monospace font had loaded, so it sized itself to the fallback font for the whole visit. It now waits for the real font (up to 3 seconds) before measuring.
+**Why it matters:** A 1-pixel bug nobody would ever see — found only because a pixel-diff check during an unrelated change flagged it. Plumbing; a footnote at most.
+**Shareable:** no
+**Tags:** #bugfix #fonts #harps
+_2 files changed, 40 insertions(+), 21 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-10-05 15:50 · zapier-gallery · cce6584
 **What:** Put the tile edit icon on the title row
 **Why it matters:** _(stub — enrich me)_
