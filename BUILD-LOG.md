@@ -16,6 +16,22 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-10-12 17:38 · wallpaper · 4142b07, b630ff2
+**What:** Tore the whole backend out of Wallypaper. No more Supabase database, no Cloudflare R2 storage, no admin login. The gallery is now one prerendered static page, built from whatever images are sitting in a folder in the repo. Adding a wallpaper means dropping a file in and pushing.
+**Why it matters:** I'd started turning a small wallpaper gallery into an invite-only multi-artist platform (auth, uploads, moderation tickets, the works) before anyone was using it. Walking that back deleted ~2,800 lines, freed a Supabase free-tier slot for a new project, and left a site with nothing to break or pay for. Sometimes the right-sized version is the one you started with.
+**Shareable:** yes — the diff stat (+171 / −2,786), the folder of images next to the live gallery, and the closed ticket list for the abandoned epic.
+**Tags:** #refactor #infra #design
+_52 files changed, 171 insertions(+), 2786 deletions(-) · branch `main`_
+status: enriched
+
+## 2026-10-08 15:09 · Skills · 3e74373
+**What:** Added a "bants to blog" skill to my public Skills repo: point it at a meeting transcript, pick one topic from a short list of ones it actually found in the conversation, and it writes a 400–800 word internal blog post about just that topic. It researches every outside idea people mentioned in passing (frameworks, books, company practices), links a verified source for each, and flags where the speaker's version didn't match the source.
+**Why it matters:** Good conversations rarely get written down, and when they do it's as a whole-meeting summary nobody reads. The skill is built around two observations: a meeting wanders but a good post covers one thing, and people cite ideas loosely from memory, so the write-up should check and link them rather than repeat them.
+**Shareable:** yes — the SKILL.md on GitHub, the "pick a topic" prompt showing 3–4 candidate topics, and a finished post with its linked sources (blur anything internal).
+**Tags:** #ai #new-feature #content #dx
+_2 files changed, 187 insertions(+) · branch `main`_
+status: enriched
+
 ## 2026-10-06 18:04 · harps-website · 5829e15
 **What:** Fixed a font-loading race in the Harps hero animation: the voice capsule measured its own width before the site's monospace font had loaded, so it sized itself to the fallback font for the whole visit. It now waits for the real font (up to 3 seconds) before measuring.
 **Why it matters:** A 1-pixel bug nobody would ever see — found only because a pixel-diff check during an unrelated change flagged it. Plumbing; a footnote at most.
@@ -24,101 +40,37 @@ Entry format lives in
 _2 files changed, 40 insertions(+), 21 deletions(-) · branch `main`_
 status: enriched
 
-## 2026-10-05 15:50 · zapier-gallery · cce6584
-**What:** Put the tile edit icon on the title row
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
-_2 files changed, 4 insertions(+), 5 deletions(-) · branch `main`_
-status: stub
-
-## 2026-10-05 15:47 · zapier-gallery · 3f36f22
-**What:** Add a tag search and a pencil icon on gallery tiles
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
-_5 files changed, 54 insertions(+), 17 deletions(-) · branch `main`_
-status: stub
-
-## 2026-10-05 15:45 · zapier-gallery · cff5483
-**What:** Show selected tags as highlighted chips instead of checkboxes
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
-_1 file changed, 8 insertions(+), 1 deletion(-) · branch `main`_
-status: stub
-
-## 2026-10-05 15:38 · zapier-gallery · bf4ed65
-**What:** Hover cards, edit pages, archive, custom screenshot URL, adopted tags
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
-_18 files changed, 347 insertions(+), 286 deletions(-) · branch `main`_
-status: stub
+## 2026-10-05 15:38 · zapier-gallery · bf4ed65, cff5483, 3f36f22, cce6584
+**What:** Simplified the internal prototype gallery: the per-prototype detail page is gone, so clicking a tile opens the prototype itself and hovering shows its description. Each tile got a small pencil icon next to its title that leads to an edit page (title, link, description, tags, a new screenshot, or archiving it out of the main view). Tag picking became a searchable set of highlighted chips instead of a long checkbox list, using the same curated tag list as the team's prototype starter.
+**Why it matters:** The detail page was an extra click between people and the thing they came to see. Editing and archiving mean stale or wrongly tagged prototypes can now be fixed by their owners instead of piling up.
+**Shareable:** no — internal Zapier tooling, not for a public audience.
+**Tags:** #ui #polish #new-feature #zapier
+_19 files changed, 413 insertions(+), 309 deletions(-) · branch `main`_
+status: enriched
 
 ## 2026-10-01 15:56 · zapier-gallery · 8a359b8
-**What:** Skip the Okta gate until real credentials are wired in
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** The gallery's Okta sign-in requirement now switches itself off while the real Okta credentials aren't set up yet, so submitting and posting updates work again, attributed to a shared "Unattributed (Okta pending)" placeholder. It turns back on automatically once the credentials are added.
+**Why it matters:** Sign-in was blocked on IT issuing credentials, and in the meantime every submission hit a generic server error. Plumbing: a stopgap so the tool stays usable while waiting on someone else.
+**Shareable:** no
+**Tags:** #infra #bugfix #zapier
 _8 files changed, 81 insertions(+), 32 deletions(-) · branch `main`_
-status: stub
+status: enriched
 
 ## 2026-10-01 15:49 · zapier-gallery · 0ecbfb4
-**What:** Switch Prisma to the pg driver adapter
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** Changed how the gallery talks to its database: queries now go through the standard Postgres driver instead of Prisma's own built-in connection engine.
+**Why it matters:** On at least one network, Prisma's engine just hung trying to reach the database, while every other way of connecting to the same host worked instantly (it looked like broken IPv6 routing). Swapping the connection layer sidestepped it. Plumbing.
+**Shareable:** no
+**Tags:** #bugfix #infra #zapier
 _4 files changed, 174 insertions(+), 10 deletions(-) · branch `main`_
-status: stub
-
-## 2026-10-01 15:39 · zapier-gallery · 563d2e0
-**What:** Close out the screenshot-bypass tickets with what actually shipped
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
-_2 files changed, 69 insertions(+), 9 deletions(-) · branch `main`_
-status: stub
-
-## 2026-10-01 15:38 · zapier-gallery · 1a2d9de
-**What:** Point submit-to-gallery at design-gallery by default, fix docs
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
-_2 files changed, 40 insertions(+), 16 deletions(-) · branch `main`_
-status: stub
-
-## 2026-10-01 15:35 · zapier-gallery · 54a51c1
-**What:** Accept a pre-captured screenshot, capture it locally in the CLI
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
-_3 files changed, 91 insertions(+), 9 deletions(-) · branch `main`_
-status: stub
-
-## 2026-10-01 07:51 · zapier-gallery · c551168
-**What:** Present our OIDC identity when capturing screenshots
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
-_1 file changed, 9 insertions(+) · branch `main`_
-status: stub
+status: enriched
 
 ## 2026-09-30 13:08 · assistant · 0fa3a07
-**What:** Add meeting notes: Extended Leadership Team Weekly, Build Operating System Review, Zone Leads Weekly Sync, Agent Experience Evals and Metrics Bootcamp, Jon Zach Skip 1-1, Mindy Zach 1-1, Chris Zach Skip 1-1
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** Filed a batch of work meeting notes into my private assistant repo.
+**Why it matters:** Private work notes. Nothing to share.
+**Shareable:** no
+**Tags:** #content
 _16 files changed, 4446 insertions(+) · branch `main`_
-status: stub
-
-## 2026-09-29 17:13 · zapier-gallery · 45d55fd
-**What:** Support Vercel Deployment Protection bypass in the submit-to-gallery CLI
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
-_2 files changed, 20 insertions(+), 1 deletion(-) · branch `main`_
-status: stub
+status: enriched
 
 ## 2026-09-29 17:05 · harps-website + voice-capture · 8fe361b · ccc7103
 **What:** Harps downloads now come from GitHub Releases instead of a file checked into the website's code. The site's Download buttons point at "latest release", and the app's release process now publishes each new version as a proper GitHub release with its notes — the first one, 0.4.4, is up.
@@ -152,13 +104,13 @@ status: enriched
 _8 files changed, 1852 insertions(+), 40 deletions(-) · branch `main`_
 status: enriched
 
-## 2026-09-29 15:11 · zapier-gallery · 57e8d6f
-**What:** Add tickets for remaining Okta and screenshot-bypass work
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
-_3 files changed, 124 insertions(+) · branch `main`_
-status: stub
+## 2026-09-29 15:11 · zapier-gallery · 57e8d6f, 45d55fd, c551168, 54a51c1, 1a2d9de, 563d2e0
+**What:** Got prototype submissions and their screenshots working behind Vercel's login wall. The gallery moved to a team Vercel account where every deployment requires sign-in, which blocked the submit CLI, and the gallery's screenshot bot couldn't load prototypes protected the same way. The CLI got an optional bypass key. For screenshots, a first attempt (having the gallery identify itself to other Vercel projects as a trusted source) was configured but still didn't get through. The fix that shipped: the CLI now takes the screenshot on the submitter's own machine with their installed Chrome and uploads the image, and the server-side capture remains as a fallback for web-form submissions.
+**Why it matters:** Two days spent trying to get through the protection, then a fix that skips it entirely: the submitter already has the prototype running locally, so there's nothing protected to fetch. Internal tooling, but "stop fighting the wall and take the screenshot where the app already runs" is the lesson.
+**Shareable:** no — internal Zapier tooling, not for a public audience.
+**Tags:** #infra #integration #bugfix #zapier
+_8 files changed, 353 insertions(+), 35 deletions(-) · branch `main`_
+status: enriched
 
 ## 2026-09-29 15:02 · harps-website + Skills · 9ecba96 · 00a89d3
 **What:** Built a reusable AI code-reviewer that judges changes only against a project's own written rules (its design doc), not generic best practices — saved as a universal tool in my public Skills repo that can be dropped into any project, and installed first on the Harps site. To prove it worked, I fed it a deliberately sloppy change (it failed it, citing every broken rule) and then one of my own real commits from an hour earlier — which it also failed, correctly: the design doc I'd just written made a claim the site didn't back up.
