@@ -22,7 +22,7 @@ Entry format lives in
 **Shareable:** no
 **Tags:** #content
 _5 files changed, 2771 insertions(+) · branch `main`_
-status: stub
+status: enriched
 
 ## 2026-10-12 17:38 · wallpaper · 4142b07, b630ff2
 **What:** Tore the whole backend out of Wallypaper. No more Supabase database, no Cloudflare R2 storage, no admin login. The gallery is now one prerendered static page, built from whatever images are sitting in a folder in the repo. Adding a wallpaper means dropping a file in and pushing.
