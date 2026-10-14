@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-10-14 09:14 · assistant · 86b583d
+**What:** Filed a day's worth of work meetings into my private assistant repo — pulled five transcripts from Granola, wrote structured notes for each, and routed them to the right person or topic folder automatically.
+**Why it matters:** Private work notes. The only interesting part is the routing, and that's already covered by the skill itself.
+**Shareable:** no
+**Tags:** #content
+_5 files changed, 2771 insertions(+) · branch `main`_
+status: stub
+
 ## 2026-10-12 17:38 · wallpaper · 4142b07, b630ff2
 **What:** Tore the whole backend out of Wallypaper. No more Supabase database, no Cloudflare R2 storage, no admin login. The gallery is now one prerendered static page, built from whatever images are sitting in a folder in the repo. Adding a wallpaper means dropping a file in and pushing.
 **Why it matters:** I'd started turning a small wallpaper gallery into an invite-only multi-artist platform (auth, uploads, moderation tickets, the works) before anyone was using it. Walking that back deleted ~2,800 lines, freed a Supabase free-tier slot for a new project, and left a site with nothing to break or pay for. Sometimes the right-sized version is the one you started with.
