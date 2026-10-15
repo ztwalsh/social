@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-10-15 15:26 · assistantOS · 8b0bdad, bb1f450, 9028366, 450e33b, 7f03f3c
+**What:** Built an "Automations" section into my personal OS: a small observability dashboard for the Zapier zaps I own. I pick which zaps to watch, and it shows each one's health (failing, broken trigger, gone quiet, healthy), recent runs, success rate and run times, a 30-day trend chart, and the full input/output of any run. When a watched zap breaks, Zapier's Slack bot DMs me once, then again when it recovers.
+**Why it matters:** My zaps fail silently. The only way I'd find out was noticing something didn't happen. Now there's one place to see they're working, and a ping when one isn't, without a flood of repeats: a flaky zap is one alert, not one every five minutes. It's built on Zapier's own SDK, which is the fun part to show: Zapier observing Zapier. The quiet-zap rule also had to learn that a zap I trigger by hand going quiet overnight isn't an outage.
+**Shareable:** yes — overview grid of health cards; a zap's detail page with the run timeline and 30-day chart; the Slack DM landing on my phone. Blur zap names, email content and run inputs (work data).
+**Tags:** #new-feature #zapier #integration #ui #design
+_5 commits, ~3.5k lines across server and UI · branch `main`_
+status: enriched
+
 ## 2026-10-14 09:14 · assistant · 86b583d
 **What:** Filed a day's worth of work meetings into my private assistant repo — pulled five transcripts from Granola, wrote structured notes for each, and routed them to the right person or topic folder automatically.
 **Why it matters:** Private work notes. The only interesting part is the routing, and that's already covered by the skill itself.
