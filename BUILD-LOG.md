@@ -16,6 +16,62 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-10-20 08:18 · zapier-gallery · 06679a1
+**What:** Pulled the Zapier logomark out of the rail and replaced it with the full wordmark, tastefully sized and centered at the top of the page, present on every route.
+**Why it matters:** A small logomark tucked into a nav rail reads as decoration; a centered wordmark at the top reads as a masthead — it's the difference between "this app has a logo somewhere" and "this is a Zapier thing." Closes out this round of chrome polish.
+**Shareable:** no — internal Zapier tooling, not for a public audience.
+**Tags:** #ui #polish #zapier
+_4 files changed, 19 insertions(+), 13 deletions(-) · branch `main`_
+status: enriched
+
+## 2026-10-20 07:57 · zapier-gallery · 567ca20
+**What:** Replaced the gallery's page header entirely with a floating vertical icon rail pinned to the left edge — navigation, account, and "add a project" all live there now, and the submit button became a rail icon that offers "Add a URL" or "Start from Seed" on click.
+**Why it matters:** Dropping the header and its dividing lines is what made the page stop looking like a typical internal tool with a nav bar bolted on top. It took two rounds to get right — a first version borrowed too literally from a personal project's dark floating toolbar before landing back on the site's own light, neutral look with just the shape kept.
+**Shareable:** no — internal Zapier tooling, not for a public audience.
+**Tags:** #ui #design #polish #zapier
+_8 files changed, 233 insertions(+), 132 deletions(-) · branch `main`_
+status: enriched
+
+## 2026-10-20 08:02 · zapier-gallery · 200ac24
+**What:** Reverted the rail to a plain white background and removed the redundant "All prototypes" page headline sitting above content that already said the same thing.
+**Why it matters:** A fast self-correction after the floating-rail rework overshot into a darker, more opinionated look than the rest of the site. Cutting the duplicate headline is the kind of small redundancy that's obvious once you're staring at the real page instead of a mockup.
+**Shareable:** no — internal Zapier tooling, not for a public audience.
+**Tags:** #ui #polish #zapier
+_2 files changed, 11 insertions(+), 35 deletions(-) · branch `main`_
+status: enriched
+
+## 2026-10-18 19:08 · zapier-gallery · 1b35555
+**What:** Tags became a searchable filter in the gallery's own content area instead of a sidebar list, the Seed starter card now stays pinned at the top, and clicking a tile opens a near-full-screen detail view instead of cramming everything into a hover state.
+**Why it matters:** The old hover card was trying to show a title, description, tags, and actions all at once in a tiny space, and it was unreadable. Splitting "quick glance" from "I want the details" into a light hover and a real modal is the kind of UX call that only shows up once you're using the thing daily.
+**Shareable:** no — internal Zapier tooling, not for a public audience.
+**Tags:** #ui #polish #zapier
+_6 files changed, 250 insertions(+), 52 deletions(-) · branch `main`_
+status: enriched
+
+## 2026-10-19 23:14 · zapier-gallery · 9fd9c5b
+**What:** Took a design reference (on.design) and rewrote the gallery's visual language against it — a full token pass across color, radius, and motion, aimed at making the internal tool feel as clean and considered as a polished product site.
+**Why it matters:** Internal tools usually look like internal tools. This was a deliberate push to hold this one to a real design bar instead — using the team's own Zinnia tokens, not borrowed styling, so it still looks native to Zapier while reading as considerably more finished.
+**Shareable:** no — internal Zapier tooling, not for a public audience.
+**Tags:** #design #polish #ui #zapier
+_3 files changed, 112 insertions(+), 193 deletions(-) · branch `main`_
+status: enriched
+
+## 2026-10-18 19:08 · zapier-gallery · 1b35555
+**What:** Move tags to a content-area filter, pin Seed card, add a detail modal
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_6 files changed, 250 insertions(+), 52 deletions(-) · branch `main`_
+status: stub
+
+## 2026-10-18 18:55 · zapier-gallery · 1fbb7db
+**What:** Prototype tiles in the gallery can now carry an optional repo link, always show who submitted them, and a pinned "Seed" card points people at the team's prototype starter template.
+**Why it matters:** Three small asks that came in over Slack from teammates browsing the gallery — a repo link so people can fork what they're looking at, visible authorship so credit doesn't get lost, and a standing pointer to the starter kit so first-time submitters know where to begin. Internal tooling, shipped from feedback.
+**Shareable:** no — internal Zapier tooling, not for a public audience.
+**Tags:** #new-feature #polish #zapier
+_13 files changed, 96 insertions(+), 15 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-10-15 15:26 · assistantOS · 8b0bdad, bb1f450, 9028366, 450e33b, 7f03f3c
 **What:** Built an "Automations" section into my personal OS: a small observability dashboard for the Zapier zaps I own. I pick which zaps to watch, and it shows each one's health (failing, broken trigger, gone quiet, healthy), recent runs, success rate and run times, a 30-day trend chart, and the full input/output of any run. When a watched zap breaks, Zapier's Slack bot DMs me once, then again when it recovers.
 **Why it matters:** My zaps fail silently. The only way I'd find out was noticing something didn't happen. Now there's one place to see they're working, and a ping when one isn't, without a flood of repeats: a flaky zap is one alert, not one every five minutes. It's built on Zapier's own SDK, which is the fun part to show: Zapier observing Zapier. The quiet-zap rule also had to learn that a zap I trigger by hand going quiet overnight isn't an outage.
