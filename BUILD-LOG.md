@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-10-20 13:10 · zapier-gallery · 82918d7
+**What:** The gallery's left-edge nav icons no longer sit inside a pill-shaped container — they float directly on the page now, keeping their hover highlight and tooltips, with a soft shadow on each icon so they stay readable over busy tile screenshots behind them.
+**Why it matters:** One more step toward the "no visible chrome" look from the on.design reference — a floating capsule still reads as a UI element; bare icons read as part of the page itself.
+**Shareable:** no — internal Zapier tooling, not for a public audience.
+**Tags:** #ui #design #polish #zapier
+_1 file changed, 2 insertions(+), 4 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-10-20 08:25 · zapier-gallery · 01f554d
 **What:** Sized the new top wordmark up and gave the content below it more breathing room so the logo and the filter button no longer crowd the first row of prototype tiles.
 **Why it matters:** The logo looked a little timid at its first size, and the page content started right underneath it with no real gap — a quick follow-up pass after seeing it live.
