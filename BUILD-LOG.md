@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-10-20 13:19 · zapier-gallery · 9b77495
+**What:** Switched the gallery's nav icons from plain gray to Zapier's deep plum-black brand color — dimmed at rest, full strength on hover and when a section is active.
+**Why it matters:** Small continuation of the rail's visual cleanup — swapping generic gray for the design system's own near-black plum ties the icons back to Zapier's actual brand palette instead of a default neutral.
+**Shareable:** no — internal Zapier tooling, not for a public audience.
+**Tags:** #ui #design #polish #zapier
+_1 file changed, 6 insertions(+), 4 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-10-20 13:14 · zapier-gallery · 45f22c1
 **What:** Pulled the account icon out of the gallery's nav rail for now.
 **Why it matters:** It was only ever a disabled "?" placeholder since real sign-in isn't wired up yet — better to leave it out than show an icon that does nothing. It'll come back once Okta credentials land.
