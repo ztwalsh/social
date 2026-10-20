@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-10-20 13:56 · zapier-gallery · 3961be0
+**What:** Removed the gray circle that appeared behind a nav icon on hover and when active — now only the icon itself changes color, to orange.
+**Why it matters:** Immediate self-correction on the orange-icon change: a gray pill behind an orange icon muddied the color instead of highlighting it. Simpler reads cleaner.
+**Shareable:** no — internal Zapier tooling, not for a public audience.
+**Tags:** #ui #design #polish #zapier
+_1 file changed, 3 insertions(+), 3 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-10-20 13:55 · zapier-gallery · b558182
 **What:** The gallery's nav icons now turn Zapier's signature orange on hover and when their section is active, instead of the deep plum from the previous pass.
 **Why it matters:** A quick follow-up swap — orange is the one unmistakably "Zapier" color, so reserving it for interaction states makes the nav feel more branded without going color-heavy everywhere.
