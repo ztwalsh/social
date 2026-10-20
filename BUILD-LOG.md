@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-10-20 13:14 · zapier-gallery · 45f22c1
+**What:** Pulled the account icon out of the gallery's nav rail for now.
+**Why it matters:** It was only ever a disabled "?" placeholder since real sign-in isn't wired up yet — better to leave it out than show an icon that does nothing. It'll come back once Okta credentials land.
+**Shareable:** no — internal Zapier tooling, not for a public audience.
+**Tags:** #ui #polish #zapier
+_1 file changed, 3 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-10-20 13:10 · zapier-gallery · 82918d7
 **What:** The gallery's left-edge nav icons no longer sit inside a pill-shaped container — they float directly on the page now, keeping their hover highlight and tooltips, with a soft shadow on each icon so they stay readable over busy tile screenshots behind them.
 **Why it matters:** One more step toward the "no visible chrome" look from the on.design reference — a floating capsule still reads as a UI element; bare icons read as part of the page itself.
