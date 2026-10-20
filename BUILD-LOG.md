@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-10-20 08:25 · zapier-gallery · 01f554d
+**What:** Sized the new top wordmark up and gave the content below it more breathing room so the logo and the filter button no longer crowd the first row of prototype tiles.
+**Why it matters:** The logo looked a little timid at its first size, and the page content started right underneath it with no real gap — a quick follow-up pass after seeing it live.
+**Shareable:** no — internal Zapier tooling, not for a public audience.
+**Tags:** #ui #polish #zapier
+_1 file changed, 2 insertions(+), 2 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-10-20 08:18 · zapier-gallery · 06679a1
 **What:** Pulled the Zapier logomark out of the rail and replaced it with the full wordmark, tastefully sized and centered at the top of the page, present on every route.
 **Why it matters:** A small logomark tucked into a nav rail reads as decoration; a centered wordmark at the top reads as a masthead — it's the difference between "this app has a logo somewhere" and "this is a Zapier thing." Closes out this round of chrome polish.
