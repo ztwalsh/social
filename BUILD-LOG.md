@@ -16,6 +16,22 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-10-25 09:13 · remote-control · fe5c655
+**What:** Add a TV by IP address and keep paired TVs connected
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_7 files changed, 353 insertions(+), 22 deletions(-) · branch `real-tv-connection`_
+status: stub
+
+## 2026-10-25 09:09 · remote-control · 9c61418
+**What:** Sign with team HSZZQ94DM7 and bundle ID com.ztwalsh.RemoteControl
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_2 files changed, 5 insertions(+), 4 deletions(-) · branch `real-tv-connection`_
+status: stub
+
 ## 2026-10-20 13:56 · zapier-gallery · 3961be0
 **What:** Removed the gray circle that appeared behind a nav icon on hover and when active — now only the icon itself changes color, to orange.
 **Why it matters:** Immediate self-correction on the orange-icon change: a gray pill behind an orange icon muddied the color instead of highlighting it. Simpler reads cleaner.
