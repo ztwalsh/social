@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-10-25 10:18 · cardio-tracking · 14ef214, e51d090
+**What:** Reworked move/think's two main screens. Home now opens on my goals under one plain headline worked out instantly from my own runs ("Five weeks in a row at 10 miles."), then the list of entries. The AI reflection moved to a new Insights tab, which looks back at a period through four lenses (what's on my mind, mood, distance, goals). Each lens has a one-line read and a tiny trend line, with a 30 days / 3 months / Year switch. Settings got folded into Profile to make room in the tab bar.
+**Why it matters:** The AI-written reflection at the top of Home took a while to load and kept saying roughly the same thing, so the screen I open most felt slow and stale. Splitting it in two fixes both: Home is instant and changes with what I actually did, and the slower, thoughtful reflection lives somewhere a short wait feels fine. The headline rules also deliberately never count down or scold a missed week, because the app is meant to feel like it knows you rather than like it's watching you.
+**Shareable:** yes. Before/after of Home (the old AI headline vs. the new goals-first headline), plus a screen recording of Insights: the index, then flipping 30 days → Year, then tapping into Mood (the dot map). Shot list in `assets/2026-10-25-cardio-tracking-goals-home-insights/`.
+**Tags:** #new-feature #ui #redesign #ai #product-thinking
+_two commits: 5 files (Home headline) + 21 files changed, 1635 insertions(+), 448 deletions(-) · branch `feature/goals-home-insights-tab`_
+status: enriched
+
 ## 2026-10-25 09:09 · remote-control · 9c61418, fe5c655
 **What:** My LG TV remote app can now connect to an actual TV. Type in the TV's IP address, tap Allow on the TV once, and the phone remembers it: it reconnects on launch, catches up when you come back to the app, and waits for the TV to boot after you turn it on. Until a real TV is paired it still shows three example TVs. Also set up signing so it runs on my own iPhone instead of just the simulator.
 **Why it matters:** Until now every button talked to a fake TV. Finding TVs automatically needs a special permission from Apple that I've only just requested, and that can take weeks, so typing the IP address by hand gets me testing the real protocol on my TVs today instead of waiting on Apple's review.
