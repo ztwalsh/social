@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-10-25 15:19 · cardio-tracking · 1d9dd7e, 271e3f1
+**What:** Two small fixes to logging a new entry by voice. After you tap Done, the screen now shows a single spinning ring while it works out the details, instead of leaving the transcript and old buttons on screen. And the X on the review screen now closes the whole new-entry flow, instead of dropping you back onto a half-finished step. Then bumped the version to 3.1 (14) and sent the build to App Store Connect, together with the new Home, Insights tab and smooth chart.
+**Why it matters:** Hitting X and having the screen you're trying to close keep coming back was the most annoying bug in the app. Both fixes make the voice flow feel like one clean motion: talk, wait a beat, review, done.
+**Shareable:** no. These are small flow fixes; the release itself is better posted as part of the Home/Insights entry.
+**Tags:** #bugfix #polish #release
+_New Entry: 2 files changed, 56 insertions(+), 20 deletions(-); release bump: 1 file · branch `feature/goals-home-insights-tab`_
+status: enriched
+
 ## 2026-10-25 14:12 · cardio-tracking · a319dc5
 **What:** The distance chart in move/think's Insights tab got smoother and touchable. The line now curves gently between weeks instead of bending sharply, and if you press and drag on it, a thin crosshair, a dot and a little dark label follow your finger showing that week's distance, with a soft haptic tick on each week. The current week's stretch is dotted, because it isn't over yet.
 **Why it matters:** The old chart looked chunky and a bit misleading: it shot up from zero at the start (the first week was only half counted) and fell off a cliff at the end (this week, still in progress). Fixing the data made the shape honest, and the scrubbing borrows the exact feel of the chart in my voice-capture Mac app, so my apps start to share one interaction language. A brief hold starts the scrub, so a quick swipe on the chart still scrolls the page.
