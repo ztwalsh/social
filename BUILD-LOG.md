@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-10-25 14:12 · cardio-tracking · a319dc5
+**What:** The distance chart in move/think's Insights tab got smoother and touchable. The line now curves gently between weeks instead of bending sharply, and if you press and drag on it, a thin crosshair, a dot and a little dark label follow your finger showing that week's distance, with a soft haptic tick on each week. The current week's stretch is dotted, because it isn't over yet.
+**Why it matters:** The old chart looked chunky and a bit misleading: it shot up from zero at the start (the first week was only half counted) and fell off a cliff at the end (this week, still in progress). Fixing the data made the shape honest, and the scrubbing borrows the exact feel of the chart in my voice-capture Mac app, so my apps start to share one interaction language. A brief hold starts the scrub, so a quick swipe on the chart still scrolls the page.
+**Shareable:** yes. A screen recording of the hold-and-scrub across the Distance chart, plus a before/after still (chunky Swift Charts line vs. the smooth one). Shot list in `assets/2026-10-25-cardio-tracking-chart-scrub/`.
+**Tags:** #polish #ui #dataviz #interaction
+_5 files changed · branch `feature/goals-home-insights-tab`_
+status: enriched
+
 ## 2026-10-25 10:18 · cardio-tracking · 14ef214, e51d090, f744c69
 **What:** Reworked move/think's two main screens. Home now opens on my goals under one plain headline worked out instantly from my own runs ("Five weeks in a row at 10 miles."), then the list of entries. The AI reflection moved to a new Insights tab, which looks back at a period through four lenses (what's on my mind, mood, distance, goals). Each lens has a one-line read and a tiny trend line, with a 30 days / 3 months / Year switch. Settings got folded into Profile to make room in the tab bar, and the tab bar itself got quieter: Insights has a lightbulb, and the selected tab is just the same outline icon in darker ink, with no filled glyph or highlight pill.
 **Why it matters:** The AI-written reflection at the top of Home took a while to load and kept saying roughly the same thing, so the screen I open most felt slow and stale. Splitting it in two fixes both: Home is instant and changes with what I actually did, and the slower, thoughtful reflection lives somewhere a short wait feels fine. The headline rules also deliberately never count down or scold a missed week, because the app is meant to feel like it knows you rather than like it's watching you.
