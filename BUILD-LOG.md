@@ -16,12 +16,12 @@ Entry format lives in
 
 <!-- entries below -->
 
-## 2026-10-25 10:18 · cardio-tracking · 14ef214, e51d090
-**What:** Reworked move/think's two main screens. Home now opens on my goals under one plain headline worked out instantly from my own runs ("Five weeks in a row at 10 miles."), then the list of entries. The AI reflection moved to a new Insights tab, which looks back at a period through four lenses (what's on my mind, mood, distance, goals). Each lens has a one-line read and a tiny trend line, with a 30 days / 3 months / Year switch. Settings got folded into Profile to make room in the tab bar.
+## 2026-10-25 10:18 · cardio-tracking · 14ef214, e51d090, f744c69
+**What:** Reworked move/think's two main screens. Home now opens on my goals under one plain headline worked out instantly from my own runs ("Five weeks in a row at 10 miles."), then the list of entries. The AI reflection moved to a new Insights tab, which looks back at a period through four lenses (what's on my mind, mood, distance, goals). Each lens has a one-line read and a tiny trend line, with a 30 days / 3 months / Year switch. Settings got folded into Profile to make room in the tab bar, and the tab bar itself got quieter: Insights has a lightbulb, and the selected tab is just the same outline icon in darker ink, with no filled glyph or highlight pill.
 **Why it matters:** The AI-written reflection at the top of Home took a while to load and kept saying roughly the same thing, so the screen I open most felt slow and stale. Splitting it in two fixes both: Home is instant and changes with what I actually did, and the slower, thoughtful reflection lives somewhere a short wait feels fine. The headline rules also deliberately never count down or scold a missed week, because the app is meant to feel like it knows you rather than like it's watching you.
 **Shareable:** yes. Before/after of Home (the old AI headline vs. the new goals-first headline), plus a screen recording of Insights: the index, then flipping 30 days → Year, then tapping into Mood (the dot map). Shot list in `assets/2026-10-25-cardio-tracking-goals-home-insights/`.
 **Tags:** #new-feature #ui #redesign #ai #product-thinking
-_two commits: 5 files (Home headline) + 21 files changed, 1635 insertions(+), 448 deletions(-) · branch `feature/goals-home-insights-tab`_
+_two commits: 5 files (Home headline) + 21 files changed, 1635 insertions(+), 448 deletions(-) + tab bar polish (2 files) · branch `feature/goals-home-insights-tab`_
 status: enriched
 
 ## 2026-10-25 09:09 · remote-control · 9c61418, fe5c655
