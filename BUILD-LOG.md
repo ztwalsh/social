@@ -16,21 +16,13 @@ Entry format lives in
 
 <!-- entries below -->
 
-## 2026-10-25 09:13 · remote-control · fe5c655
-**What:** Add a TV by IP address and keep paired TVs connected
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
-_7 files changed, 353 insertions(+), 22 deletions(-) · branch `real-tv-connection`_
-status: stub
-
-## 2026-10-25 09:09 · remote-control · 9c61418
-**What:** Sign with team HSZZQ94DM7 and bundle ID com.ztwalsh.RemoteControl
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
-_2 files changed, 5 insertions(+), 4 deletions(-) · branch `real-tv-connection`_
-status: stub
+## 2026-10-25 09:09 · remote-control · 9c61418, fe5c655
+**What:** My LG TV remote app can now connect to an actual TV. Type in the TV's IP address, tap Allow on the TV once, and the phone remembers it: it reconnects on launch, catches up when you come back to the app, and waits for the TV to boot after you turn it on. Until a real TV is paired it still shows three example TVs. Also set up signing so it runs on my own iPhone instead of just the simulator.
+**Why it matters:** Until now every button talked to a fake TV. Finding TVs automatically needs a special permission from Apple that I've only just requested, and that can take weeks, so typing the IP address by hand gets me testing the real protocol on my TVs today instead of waiting on Apple's review.
+**Shareable:** yes — phone screen recording of Add a TV → "Choose Allow on your TV" → the TV's own Allow prompt (filmed on the TV) → volume moving on the TV as I drag the bar. Shot list in `assets/2026-10-25-remote-control-real-tv-pairing/`.
+**Tags:** #new-feature #integration #experiment
+_two commits: 2 files (signing) + 7 files changed, 353 insertions(+), 22 deletions(-) · branch `real-tv-connection`_
+status: enriched
 
 ## 2026-10-20 13:56 · zapier-gallery · 3961be0
 **What:** Removed the gray circle that appeared behind a nav icon on hover and when active — now only the icon itself changes color, to orange.
@@ -121,12 +113,12 @@ _3 files changed, 112 insertions(+), 193 deletions(-) · branch `main`_
 status: enriched
 
 ## 2026-10-18 19:08 · zapier-gallery · 1b35555
-**What:** Move tags to a content-area filter, pin Seed card, add a detail modal
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** The gallery's 58-item tag list left the sidebar and became a searchable "Filter by tag" popover above the tiles. Hovering a tile now shows only its title, and clicking opens a near-full-screen view with the full screenshot, description, owner, tags and Open/Repo/Edit buttons.
+**Why it matters:** The old hover overlay put small text over busy screenshots, where it was unreadable, and the long tag list made the sidebar the loudest thing on the page. Moving details into a click-to-open view keeps the grid about the screenshots.
+**Shareable:** no — internal Zapier tooling, not for a public audience.
+**Tags:** #ui #design #polish #zapier
 _6 files changed, 250 insertions(+), 52 deletions(-) · branch `main`_
-status: stub
+status: enriched
 
 ## 2026-10-18 18:55 · zapier-gallery · 1fbb7db
 **What:** Prototype tiles in the gallery can now carry an optional repo link, always show who submitted them, and a pinned "Seed" card points people at the team's prototype starter template.
