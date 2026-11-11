@@ -16,6 +16,54 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-11 12:52 · remote-control · a469af9
+**What:** My iPhone TV remote now works with Samsung and Vizio TVs as well as LG. It also got a swipe-and-tap touchpad for moving around the TV's menus, a full app list where you can pin favorites, a screen for editing a saved TV, a custom icon set with light, dark and tinted app icons, and a slowly pulsing dot under whichever app is on screen.
+**Why it matters:** Most TV remote apps only work with one brand and are full of ads. This one covers the three brands in the house from a single clean screen. The pulsing dot replaced a glowing ring that felt too loud; a small cue that it's live is enough.
+**Shareable:** yes — on-device screen recording of the remote: switching between TVs of different brands, the navigate pad, pinning from All apps, and a close-up of the pulsing current-app dot.
+**Tags:** #new-feature #integration #ui #polish #design
+_98 files changed, 5212 insertions(+), 379 deletions(-) · branch `real-tv-connection`_
+status: enriched
+
+## 2026-11-06 14:13 · ai-experience-review · a80436a, 1c66d80, 86deebc
+**What:** Internal work deck update: wording tweaks, reworked two slides, and fixed review tooling bugs.
+**Why it matters:** Internal work content, not for sharing.
+**Shareable:** no
+**Tags:** #internal
+_13 files changed across 3 commits · branch `main`_
+status: enriched
+
+## 2026-11-06 14:02 · ai-experience-review · 03b68f1
+**What:** Internal work deck update: added a diagram slide and refreshed related content.
+**Why it matters:** Internal work content, not for sharing.
+**Shareable:** no
+**Tags:** #internal
+_8 files changed, 287 insertions(+), 29 deletions(-) · branch `main`_
+status: enriched
+
+## 2026-11-06 10:31 · ai-experience-review · 32ddb21
+**What:** Internal work project: small visual cleanup.
+**Why it matters:** Internal only, not for posting.
+**Shareable:** no
+**Tags:** #polish
+_5 files changed, 104 insertions(+), 49 deletions(-) · branch `main`_
+status: enriched
+
+## 2026-11-05 09:23 · ai-experience-review · 8e71acf
+**What:** Internal work project: labeled a draft page so reviewers don't read it as final.
+**Why it matters:** Internal only, not for posting.
+**Shareable:** no
+**Tags:** #content
+_2 files changed, 35 insertions(+), 1 deletion(-) · branch `main`_
+status: enriched
+
+## 2026-11-02 18:06 · ai-experience-review · ecb10dd, fadae63
+**What:** Internal work project: reorganized a presentation.
+**Why it matters:** Internal only, not for posting.
+**Shareable:** no
+**Tags:** #content
+_19 files changed, 2194 insertions(+), 420 deletions(-)_
+status: enriched
+
 ## 2026-10-25 15:19 · cardio-tracking · 1d9dd7e, 271e3f1
 **What:** Two small fixes to logging a new entry by voice. After you tap Done, the screen now shows a single spinning ring while it works out the details, instead of leaving the transcript and old buttons on screen. And the X on the review screen now closes the whole new-entry flow, instead of dropping you back onto a half-finished step. Then bumped the version to 3.1 (14) and sent the build to App Store Connect, together with the new Home, Insights tab and smooth chart.
 **Why it matters:** Hitting X and having the screen you're trying to close keep coming back was the most annoying bug in the app. Both fixes make the voice flow feel like one clean motion: talk, wait a beat, review, done.
