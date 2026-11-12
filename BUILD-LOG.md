@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-12 10:48 · remote-control · fbf3a27
+**What:** In my iPhone TV remote, when a search box or password field comes up on the TV, a text field now opens on the phone with the iPhone keyboard ready. Whatever you type shows up on the TV as you type it. On LG TVs the play/pause button also follows what the TV is actually doing, instead of guessing.
+**Why it matters:** Typing a password one letter at a time with arrow keys is the worst part of any TV. Now you just type on your phone. There's a catch worth sharing: Netflix and YouTube draw their own letter grids, so the TV never says a keyboard is open there, and the phone can't help. The play/pause fix came from the same kind of digging: the button seemed "backwards" because TVs only get "play" or "pause" commands, never a toggle.
+**Shareable:** yes — screen recording of the phone and TV side by side, typing into the LG browser's address bar or a Wi-Fi password field, with the text appearing on the TV.
+**Tags:** #new-feature #integration #ui #bugfix
+_13 files changed, 315 insertions(+), 13 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-11-11 12:52 · remote-control · a469af9
 **What:** My iPhone TV remote now works with Samsung and Vizio TVs as well as LG. It also got a swipe-and-tap touchpad for moving around the TV's menus, a full app list where you can pin favorites, a screen for editing a saved TV, a custom icon set with light, dark and tinted app icons, and a slowly pulsing dot under whichever app is on screen.
 **Why it matters:** Most TV remote apps only work with one brand and are full of ads. This one covers the three brands in the house from a single clean screen. The pulsing dot replaced a glowing ring that felt too loud; a small cue that it's live is enough.
