@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-13 17:49 · movethink-website · 0acbd04
+**What:** A polish pass on MoveThink's Afterglow landing page. The product scenes now sit in cards that are only as tall as their contents and grow as things arrive: the capture card opens a line at a time as the transcript comes in, and the activity card opens when the mood lands. The coloured light reaches half way into each panel, and on the last screen it rises as a dome behind the headline. The nav carries the full new logo mark.
+**Why it matters:** The first version had demos floating in fixed boxes with dead space around them, which read as mock-ups. Cards that grow with their content make the same animations feel like the app doing something, and that is the difference between a page that describes a voice journal and one that shows it.
+**Shareable:** yes — a screen recording of the hero capture card growing as the words arrive, and one scroll through all six panels to show the light.
+**Tags:** #design #polish #ui
+_9 files changed, 237 insertions(+), 135 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-11-13 17:09 · movethink-website · d537a3c
 **What:** MoveThink has a logo mark. After four rounds and about 285 candidates, the pick is a disc of small dots that grow from left to right until they close up into one solid shape. The logo section of the site now opens on that mark, with the earlier rounds one dropdown away, and the mark replaces the old three bars in the Afterglow landing page's nav and footer.
 **Why it matters:** The mark says what the app is for: scattered thoughts coming together after you move and talk. Keeping every rejected round browsable behind the winner shows the route from three slanted bars to a halftone disc, and that route is more interesting than the result alone.
