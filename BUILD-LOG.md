@@ -16,6 +16,22 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-13 14:41 · movethink-website · e282f36
+**What:** The MoveThink marketing site is under version control for the first time: a single commit holding seven competing landing-page directions (Afterglow, Fieldnotes, Loud, Marks, Partner, Slash, Weather), a pitch page that lines them up side by side, and the product and design principles they were all built against.
+**Why it matters:** MoveThink is a running app that tries to be a partner who remembers what you were thinking about, not a dashboard that measures you, and that is a hard thing to say on a landing page. Instead of polishing one guess, the site was built seven different ways first so the directions could be compared as real pages. The commit itself is housekeeping; the seven-way exploration is the story.
+**Shareable:** yes — the pitch page with all seven directions side by side, plus a short scroll through the Afterglow direction with its grainy gradient light.
+**Tags:** #design #experiment #ui #infra
+_256 files changed, 33982 insertions(+) · branch `main`_
+status: enriched
+
+## 2026-11-12 13:41 · design-context · 634cb13, 766ce4e, 14675f9
+**What:** Set up a new design-context repo: moved five skills over from the older skills repo, then added the folder structure, READMEs, and placeholders around them.
+**Why it matters:** Plumbing. It gives design-related skills and context one home instead of living scattered in a general skills repo. _(reconstructed from commit metadata)_
+**Shareable:** no
+**Tags:** #infra #dx
+_32 files changed, 3541 insertions(+), then 11 files changed, 194 insertions(+), 73 deletions(-) · branch `setup-structure`_
+status: enriched
+
 ## 2026-11-12 10:48 · remote-control · fbf3a27
 **What:** In my iPhone TV remote, when a search box or password field comes up on the TV, a text field now opens on the phone with the iPhone keyboard ready. Whatever you type shows up on the TV as you type it. On LG TVs the play/pause button also follows what the TV is actually doing, instead of guessing.
 **Why it matters:** Typing a password one letter at a time with arrow keys is the worst part of any TV. Now you just type on your phone. There's a catch worth sharing: Netflix and YouTube draw their own letter grids, so the TV never says a keyboard is open there, and the phone can't help. The play/pause fix came from the same kind of digging: the button seemed "backwards" because TVs only get "play" or "pause" commands, never a toggle.
