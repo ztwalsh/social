@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-13 17:09 · movethink-website · d537a3c
+**What:** MoveThink has a logo mark. After four rounds and about 285 candidates, the pick is a disc of small dots that grow from left to right until they close up into one solid shape. The logo section of the site now opens on that mark, with the earlier rounds one dropdown away, and the mark replaces the old three bars in the Afterglow landing page's nav and footer.
+**Why it matters:** The mark says what the app is for: scattered thoughts coming together after you move and talk. Keeping every rejected round browsable behind the winner shows the route from three slanted bars to a halftone disc, and that route is more interesting than the result alone.
+**Shareable:** yes — the chosen mark page, a scroll back through rounds 1 to 4, and the mark in the Afterglow nav.
+**Tags:** #design #ui #polish
+_16 files changed, 396 insertions(+), 343 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-11-13 14:41 · movethink-website · e282f36
 **What:** The MoveThink marketing site is under version control for the first time: a single commit holding seven competing landing-page directions (Afterglow, Fieldnotes, Loud, Marks, Partner, Slash, Weather), a pitch page that lines them up side by side, and the product and design principles they were all built against.
 **Why it matters:** MoveThink is a running app that tries to be a partner who remembers what you were thinking about, not a dashboard that measures you, and that is a hard thing to say on a landing page. Instead of polishing one guess, the site was built seven different ways first so the directions could be compared as real pages. The commit itself is housekeeping; the seven-way exploration is the story.
