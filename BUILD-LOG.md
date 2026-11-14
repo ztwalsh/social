@@ -25,12 +25,12 @@ _10 files changed, 111 insertions(+), 14 deletions(-) · branch `main`_
 status: enriched
 
 ## 2026-11-14 08:55 · cardio-tracking · 57ab3cf
-**What:** App icon: new mark, with dark and tinted variants
-**Why it matters:** _(stub — enrich me)_
-**Shareable:** ?
-**Tags:**
+**What:** The MoveThink app has a new icon. The plain "m/t" lettering is replaced by the new logo mark, a disc of dots that grow into one solid shape, with separate versions for light mode, dark mode and iOS's tinted home screen.
+**Why it matters:** The icon is the part of the app people see most, and until now it was placeholder type. It now matches the mark on the new website, so the app and the site finally look like the same product.
+**Shareable:** yes — the old and new icons side by side, and the new one on a home screen in light, dark and tinted modes.
+**Tags:** #design #polish #ui
 _4 files changed, 2 insertions(+), 2 deletions(-) · branch `feature/goals-home-insights-tab`_
-status: stub
+status: enriched
 
 ## 2026-11-14 08:35 · movethink-website · f0e94bb
 **What:** MoveThink's new landing page now carries the real site's words, led by "Focus on what you're really working out", and it has a privacy policy page in the same style: a big title under deep blue light, a section index that stays beside you, and links that glide to each section. The page's glows also got grainier, and the magenta one became a wide soft lobe.
