@@ -16,6 +16,22 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-14 08:35 · movethink-website · f0e94bb
+**What:** MoveThink's new landing page now carries the real site's words, led by "Focus on what you're really working out", and it has a privacy policy page in the same style: a big title under deep blue light, a section index that stays beside you, and links that glide to each section. The page's glows also got grainier, and the magenta one became a wide soft lobe.
+**Why it matters:** A privacy policy is usually the one page nobody designs. Giving it the same light and type as the home page takes an afternoon and makes the whole site feel finished. Swapping placeholder headlines for the live copy is the step that turns a visual direction into a page that could replace the current one.
+**Shareable:** yes — the privacy page top with the blue light, a recording of a section link gliding, and the hero with the new two-line headline.
+**Tags:** #design #content #polish #ui
+_7 files changed, 598 insertions(+), 30 deletions(-) · branch `main`_
+status: enriched
+
+## 2026-11-14 07:26 · cardio-tracking · dee9a30
+**What:** Merged the latest main branch into the goals, home and insights feature branch. The only overlap was in three planning tickets for the home screen's headline card.
+**Why it matters:** Housekeeping. It keeps a long-running feature branch level with main so it can land cleanly later; nothing in the app changed.
+**Shareable:** no
+**Tags:** #infra
+_3 files changed, 23 insertions(+), 14 deletions(-) · branch `feature/goals-home-insights-tab`_
+status: enriched
+
 ## 2026-11-13 17:49 · movethink-website · 0acbd04
 **What:** A polish pass on MoveThink's Afterglow landing page. The product scenes now sit in cards that are only as tall as their contents and grow as things arrive: the capture card opens a line at a time as the transcript comes in, and the activity card opens when the mood lands. The coloured light reaches half way into each panel, and on the last screen it rises as a dome behind the headline. The nav carries the full new logo mark.
 **Why it matters:** The first version had demos floating in fixed boxes with dead space around them, which read as mock-ups. Cards that grow with their content make the same animations feel like the app doing something, and that is the difference between a page that describes a voice journal and one that shows it.
