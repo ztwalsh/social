@@ -16,6 +16,30 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-14 15:01 · movethink-website · d8dee52
+**What:** On a phone, the MoveThink landing page now moves one full screen at a time. Each section is exactly as tall as the screen, and the animated app scene in it shrinks to whatever room is left under the headline, so a swipe always lands on a whole section. The last traces of the old purple accent were also cleared out of earlier design drafts.
+**Why it matters:** Scroll snapping is easy on a desktop and usually switched off on phones, because any section taller than the screen makes the page fight your thumb. Making every section fit the screen first is what lets the same paced, one-idea-per-screen feel work where most people will see the page.
+**Shareable:** yes — a phone screen recording swiping through the six sections, and the same section at two phone heights to show the scene resizing.
+**Tags:** #ui #polish #mobile
+_10 files changed, 312 insertions(+), 138 deletions(-) · branch `main`_
+status: enriched
+
+## 2026-11-14 15:01 · cardio-tracking · 42c3422
+**What:** The MoveThink app no longer has an accent color at all. The lavender used for selected bars, progress fills and chart lines is deleted from the design tokens, those marks are now plain ink, and the design guide was rewritten from the current code with "no accent color" as its first rule.
+**Why it matters:** The color had been "removed" several times and kept coming back, because the token still existed and the written guide still described it, so every new screen picked it up again. Deleting the token and rewriting the doc is what makes a design decision stick when agents are doing the building.
+**Shareable:** yes — a goal card and a chart before and after, purple versus ink.
+**Tags:** #design #design-system #polish
+_7 files changed, 160 insertions(+), 136 deletions(-) · branch `feature/goals-home-insights-tab`_
+status: enriched
+
+## 2026-11-14 14:36 · cardio-tracking · fb13fbe, c657427
+**What:** Bumped the MoveThink app's version number for the next TestFlight build, first to 3.2 and then to 3.3 once it turned out 3.2 was already closed.
+**Why it matters:** Release bookkeeping, nothing a reader would notice.
+**Shareable:** no
+**Tags:** #release
+_2 commits, 1 file each · branch `feature/goals-home-insights-tab`_
+status: enriched
+
 ## 2026-11-14 09:46 · movethink-website · 84d001b
 **What:** Got the new MoveThink site ready to replace the live one. The Afterglow page is now the home page, the privacy policy loads from a direct link, the earlier design directions are left out of the public build, and the page has a proper title, share image and an icon made from the new logo mark. The logo exploration and the glow lab stay public but ask search engines and other bots to keep out.
 **Why it matters:** Mostly plumbing, but it's the plumbing that separates a design prototype from a site you can point a domain at. The one detail worth noticing: the App Store links straight to the privacy page, so a single-page app that 404s on a direct link would have broken that.
