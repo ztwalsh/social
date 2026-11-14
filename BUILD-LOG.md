@@ -16,6 +16,22 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-14 09:46 · movethink-website · 84d001b
+**What:** Got the new MoveThink site ready to replace the live one. The Afterglow page is now the home page, the privacy policy loads from a direct link, the earlier design directions are left out of the public build, and the page has a proper title, share image and an icon made from the new logo mark. The logo exploration and the glow lab stay public but ask search engines and other bots to keep out.
+**Why it matters:** Mostly plumbing, but it's the plumbing that separates a design prototype from a site you can point a domain at. The one detail worth noticing: the App Store links straight to the privacy page, so a single-page app that 404s on a direct link would have broken that.
+**Shareable:** no
+**Tags:** #infra #polish
+_10 files changed, 111 insertions(+), 14 deletions(-) · branch `main`_
+status: enriched
+
+## 2026-11-14 08:55 · cardio-tracking · 57ab3cf
+**What:** App icon: new mark, with dark and tinted variants
+**Why it matters:** _(stub — enrich me)_
+**Shareable:** ?
+**Tags:**
+_4 files changed, 2 insertions(+), 2 deletions(-) · branch `feature/goals-home-insights-tab`_
+status: stub
+
 ## 2026-11-14 08:35 · movethink-website · f0e94bb
 **What:** MoveThink's new landing page now carries the real site's words, led by "Focus on what you're really working out", and it has a privacy policy page in the same style: a big title under deep blue light, a section index that stays beside you, and links that glide to each section. The page's glows also got grainier, and the magenta one became a wide soft lobe.
 **Why it matters:** A privacy policy is usually the one page nobody designs. Giving it the same light and type as the home page takes an afternoon and makes the whole site feel finished. Swapping placeholder headlines for the live copy is the step that turns a visual direction into a page that could replace the current one.
