@@ -16,6 +16,31 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-15 13:31 · Skills · dc6bdfa
+**What:** One-line fix to the hook that feeds this log: it now recognises a commit that is already listed further along in an entry covering several commits.
+**Why it matters:** Minor plumbing. Without it, merging several commits into one entry made the hook add the same commits back as new stubs.
+**Shareable:** no
+**Tags:** #bugfix #tooling
+_1 file changed, 1 insertion(+) · branch `main`_
+status: enriched
+
+## 2026-11-15 13:31 · cardio-tracking · 37ae7d1
+**What:** Cards across the app (goals, mood, settings) lost their thin outline and now sit on a plain filled surface, and goal rows on Home are a little taller. Also adds a first version of recap cards: a swipeable set of three full-screen cards for a period, one on activity, one on how it felt, one in your own words, each pairing a single value with a full sentence.
+**Why it matters:** The outlines made every screen look like a grid of boxes. The recap cards are a quieter take on a year-in-review: no number appears without a sentence beside it, so it cannot be read as a scoreboard. On a feature branch, not yet built or released.
+**Shareable:** yes — a card before and after the outline was removed, and the three recap cards.
+**Tags:** #polish #ui #ios #new-feature
+_13 files changed, 417 insertions(+), 51 deletions(-) · branch `feature/goals-home-insights-tab`_
+_(reconstructed from commit metadata)_
+status: enriched
+
+## 2026-11-15 13:31 · movethink-website · 6236586
+**What:** Wrote down two decisions about the App Store screenshot backgrounds: soft lobes of light off one edge in the warm cream-to-violet colours, and light that fills the whole frame so it is dark but never black.
+**Why it matters:** Record-keeping only. Dark app screenshots need a background that is not quite black to stand out, and the reason is now on file.
+**Shareable:** no
+**Tags:** #design-process #docs
+_1 file changed, 22 insertions(+) · branch `main`_
+status: enriched
+
 ## 2026-11-15 13:25 · movethink-mcp · 246bb75
 **What:** Renamed the server that lets AI assistants read my workout data from "cardio-mcp" to "movethink-mcp": the folder, the package, the Vercel project, and a new private GitHub repo, which it had never had. The existing server address still works.
 **Why it matters:** Minor plumbing. It was the last piece still carrying the old cardio name after the app and website became movethink, and the code now has an off-machine backup.
