@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-15 08:50 · Skills · 794b0e8
+**What:** Two new skills for my coding agent. "Brain" gives every repo a folder that holds the product direction, the principles, what has been learned, and every decision with its reason, filed by area of the product. "Brainstorm" was rebuilt so ideas always land in the same playground: numbered ideas grouped into passes, each with a square illustration, browsed through one small dark-mode interface that is identical in every repo.
+**Why it matters:** The day before, I asked for the history of how the logo was chosen and four of the key reasons were gone, because they had only ever been said in a chat that could not be read back. Now each pick is written down the moment it is made, in my own words, and a missing reason is recorded as missing instead of being guessed. The playground also no longer has to be rebuilt per project.
+**Shareable:** yes — the playground index and a pass page with an idea's "grew from / led to" panel open, and a decisions file showing quoted reasons.
+**Tags:** #new-feature #ai-agents #workflow #design-process
+_20 files changed, 2240 insertions(+), 120 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-11-14 21:37 · movethink-website · ec0ea3c
 **What:** The glow lab, the small in-browser tool that makes MoveThink's grainy gradient backgrounds, can now frame an image as an iPhone screen, a square or a desktop screen and export it at 4K, 6K or 8K. The arrows that set which sides a burst of light pours out of are now on/off toggles, so any combination of the eight directions works.
 **Why it matters:** The backgrounds were only ever sized for the website. With shapes and big exports the same tool makes phone wallpapers, social squares and print-size art from one scene. An 8K square only rendered after sizing the canvas before asking the browser for a graphics context; resized afterwards, Chrome quietly capped it at 5760 pixels.
