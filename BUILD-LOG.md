@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-14 21:37 · movethink-website · ec0ea3c
+**What:** The glow lab, the small in-browser tool that makes MoveThink's grainy gradient backgrounds, can now frame an image as an iPhone screen, a square or a desktop screen and export it at 4K, 6K or 8K. The arrows that set which sides a burst of light pours out of are now on/off toggles, so any combination of the eight directions works.
+**Why it matters:** The backgrounds were only ever sized for the website. With shapes and big exports the same tool makes phone wallpapers, social squares and print-size art from one scene. An 8K square only rendered after sizing the canvas before asking the browser for a graphics context; resized afterwards, Chrome quietly capped it at 5760 pixels.
+**Shareable:** yes — the lab with three arrows selected, and one scene exported as iPhone, square and desktop.
+**Tags:** #new-feature #tools #webgl #design
+_4 files changed, 135 insertions(+), 37 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-11-14 15:01 · movethink-website · d8dee52
 **What:** On a phone, the MoveThink landing page now moves one full screen at a time. Each section is exactly as tall as the screen, and the animated app scene in it shrinks to whatever room is left under the headline, so a swipe always lands on a whole section. The last traces of the old purple accent were also cleared out of earlier design drafts.
 **Why it matters:** Scroll snapping is easy on a desktop and usually switched off on phones, because any section taller than the screen makes the page fight your thumb. Making every section fit the screen first is what lets the same paced, one-idea-per-screen feel work where most people will see the page.
