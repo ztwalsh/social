@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-15 13:25 · movethink-mcp · 246bb75
+**What:** Renamed the server that lets AI assistants read my workout data from "cardio-mcp" to "movethink-mcp": the folder, the package, the Vercel project, and a new private GitHub repo, which it had never had. The existing server address still works.
+**Why it matters:** Minor plumbing. It was the last piece still carrying the old cardio name after the app and website became movethink, and the code now has an off-machine backup.
+**Shareable:** no
+**Tags:** #brand #chore #mcp
+_2 files changed, 3 insertions(+), 3 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-11-15 13:20 · Skills · 19a5ca6
 **What:** A new "logo" skill for my coding agent. It draws logo marks in rounds, dozens at a time, as numbered vector shapes in a grid. Selecting a mark shows it beside the wordmark in three lockups, on an app-icon tile and at small sizes, and the wordmark can be switched between my own artwork and Google Fonts candidates in the same panel. I pick by number, the next round grows only from the picks, and the finished mark gets a summary page where every asset downloads as SVG, PNG or JPG, light or dark.
 **Why it matters:** The movethink logo took four rounds and 285 marks in a one-off setup. This turns that process into something any project can run from an empty folder, and it writes down each pick and its reason as it happens, which the first time round I had to reconstruct afterwards.
