@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-15 13:20 · Skills · 19a5ca6
+**What:** A new "logo" skill for my coding agent. It draws logo marks in rounds, dozens at a time, as numbered vector shapes in a grid. Selecting a mark shows it beside the wordmark in three lockups, on an app-icon tile and at small sizes, and the wordmark can be switched between my own artwork and Google Fonts candidates in the same panel. I pick by number, the next round grows only from the picks, and the finished mark gets a summary page where every asset downloads as SVG, PNG or JPG, light or dark.
+**Why it matters:** The movethink logo took four rounds and 285 marks in a one-off setup. This turns that process into something any project can run from an empty folder, and it writes down each pick and its reason as it happens, which the first time round I had to reconstruct afterwards.
+**Shareable:** yes — a round grid with the preview panel open, and the summary page with its download buttons.
+**Tags:** #new-feature #ai-agents #design-process #branding
+_15 files changed, 17311 insertions(+) · branch `main`_
+status: enriched
+
 ## 2026-11-15 08:55 · cardio-tracking · 4abcf41, 0b1d632
 **What:** The app is now called "movethink" everywhere: the home-screen name, sign-in, onboarding and the rest of the copy, replacing three older spellings. The loading screen shows the new logo, "move", the dot mark, "think", in place of plain text. Shipped as version 3.3.
 **Why it matters:** The name had drifted into move/think, Move/Think and MoveThink across the app. The new mark chosen on the website two days earlier now opens the app too, so the site, the icon and the first screen match.
