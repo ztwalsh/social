@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-15 08:55 · cardio-tracking · 4abcf41, 0b1d632
+**What:** The app is now called "movethink" everywhere: the home-screen name, sign-in, onboarding and the rest of the copy, replacing three older spellings. The loading screen shows the new logo, "move", the dot mark, "think", in place of plain text. Shipped as version 3.3.
+**Why it matters:** The name had drifted into move/think, Move/Think and MoveThink across the app. The new mark chosen on the website two days earlier now opens the app too, so the site, the icon and the first screen match.
+**Shareable:** yes — the new loading screen, and the old and new home-screen name side by side.
+**Tags:** #brand #polish #ios
+_(reconstructed from commit metadata)_
+status: enriched
+
 ## 2026-11-15 08:50 · Skills · 794b0e8, eb5377f · movethink-website fa0f663 · cardio-tracking 51b108a
 **What:** Two new skills for my coding agent. "Brain" gives every repo a folder that holds the product direction, the principles, what has been learned, and every decision with its reason, filed by area of the product. "Brainstorm" was rebuilt so ideas always land in the same playground: numbered ideas grouped into passes, each with a square illustration, browsed through one small dark-mode interface that is identical in every repo. Both the website and the iOS app repos now have a brain folder, backfilled from the last few days of work, and a hook asks the agent after every commit whether a decision went unlogged.
 **Why it matters:** The day before, I asked for the history of how the logo was chosen and four of the key reasons were gone, because they had only ever been said in a chat that could not be read back. Now each pick is written down the moment it is made, in my own words, and a missing reason is recorded as missing instead of being guessed. The playground also no longer has to be rebuilt per project.
