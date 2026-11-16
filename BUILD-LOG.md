@@ -24,9 +24,9 @@ Entry format lives in
 _1 file changed, 1 insertion(+) · branch `main`_
 status: enriched
 
-## 2026-11-15 13:31 · cardio-tracking · 37ae7d1
+## 2026-11-15 13:31 · cardio-tracking · 37ae7d1, a92e133
 **What:** Cards across the app (goals, mood, settings) lost their thin outline and now sit on a plain filled surface, and goal rows on Home are a little taller. Also adds a first version of recap cards: a swipeable set of three full-screen cards for a period, one on activity, one on how it felt, one in your own words, each pairing a single value with a full sentence.
-**Why it matters:** The outlines made every screen look like a grid of boxes. The recap cards are a quieter take on a year-in-review: no number appears without a sentence beside it, so it cannot be read as a scoreboard. On a feature branch, not yet built or released.
+**Why it matters:** Removing the outlines was a pure simplicity call, to reduce the visual design language, and the decision is now written down in the repo. The recap cards are a quieter take on a year-in-review: no number appears without a sentence beside it, so it cannot be read as a scoreboard. On a feature branch, not yet built or released.
 **Shareable:** yes — a card before and after the outline was removed, and the three recap cards.
 **Tags:** #polish #ui #ios #new-feature
 _13 files changed, 417 insertions(+), 51 deletions(-) · branch `feature/goals-home-insights-tab`_
