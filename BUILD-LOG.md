@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-16 15:45 · movethink-website · 001b8b1
+**What:** The glow lab, the tool that draws the site's grainy gradient light, went from editing one image to a small design tool. It now opens on a files screen, and a file is a canvas holding many frames that saves as you work. Select a frame to edit it, or remix it into a handful of variations: colours only, shape only, both, or wild. Frames and the shapes inside them align, distribute and snap to each other with guide lines, and the usual keys work: Option-drag to copy, Shift-drag to lock an axis, Cmd+. to hide the tools.
+**Why it matters:** Making one background at a time meant losing every version I did not export. Now I can lay twenty variations side by side, keep the ones I like, and come back to the file tomorrow. New files also start from a plain circle instead of a shape matched to someone else's reference, so what I make from here is my own.
+**Shareable:** yes — a board full of remixes, the files screen, and a short clip of remixing one frame and Option-dragging a copy with the snap guides showing.
+**Tags:** #new-feature #tools #design-process #webgl
+_22 files changed, 4671 insertions(+), 277 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-11-15 13:31 · Skills · dc6bdfa
 **What:** One-line fix to the hook that feeds this log: it now recognises a commit that is already listed further along in an entry covering several commits.
 **Why it matters:** Minor plumbing. Without it, merging several commits into one entry made the hook add the same commits back as new stubs.
