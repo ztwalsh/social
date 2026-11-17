@@ -16,6 +16,38 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-17 13:07 · assistant · ef2ba53
+**What:** Filed four meetings into the work knowledge-base repo — three from this week and one from
+October that had been missed. Each note is a written-up summary plus the complete verbatim
+transcript, routed to the right person or initiative folder, with my own action items pulled out
+into a Trello card.
+**Why it matters:** This is output from a skill rather than code — the interesting part was finding
+what was actually unprocessed. Matching meeting titles against filenames is guesswork, so instead I
+grepped every note in the repo for Granola's meeting UUIDs and diffed that against the full meeting
+list. 572 meetings already on file, 11 October ones apparently missing — and of those 11, ten turned
+out to be empty recordings or notes filed under a duplicate ID. Only one was a real gap. The cheap
+exact-match check saved re-processing a month of meetings that were already done.
+**Shareable:** no
+**Tags:** #work #skills #knowledge-base
+_5 files changed, 3720 insertions(+), 1 deletion(-) · branch `main`_
+status: enriched
+
+## 2026-11-16 18:25 · movethink-app · 5f58978, 2ebef21
+**What:** Took the old "Cardio Tracking" name out of the app itself. The Xcode project, its three
+targets, the scheme, the Swift module and the source folders are all movethink now, the repo folder
+is `movethink-app` alongside `movethink-mcp` and `movethink-website`, and the docs, ticket scopes,
+pre-commit hook and ticket prompt follow. One thing deliberately left alone: the bundle ID is still
+`com.zacharywalsh.Cardio-Tracking`. Also wrote both naming decisions down in the repo's brain folder.
+**Why it matters:** The website and the MCP server had already moved over, so this was the last
+place the old name survived — and it was the most tangled, since an Xcode rename touches 177 files.
+The bundle ID stays because App Store Connect, TestFlight and every existing install are tied to it
+and nobody ever sees it; that's the kind of tradeoff that's annoying to rediscover in six months, so
+it's on the record with the reason. Mostly plumbing, but the name is finally uniform everywhere.
+**Shareable:** no
+**Tags:** #brand #chore #ios
+_178 files changed, 194 insertions(+), 169 deletions(-) · branch `feature/goals-home-insights-tab`_
+status: enriched
+
 ## 2026-11-16 15:45 · movethink-website · 001b8b1
 **What:** The glow lab, the tool that draws the site's grainy gradient light, went from editing one image to a small design tool. It now opens on a files screen, and a file is a canvas holding many frames that saves as you work. Select a frame to edit it, or remix it into a handful of variations: colours only, shape only, both, or wild. Frames and the shapes inside them align, distribute and snap to each other with guide lines, and the usual keys work: Option-drag to copy, Shift-drag to lock an axis, Cmd+. to hide the tools.
 **Why it matters:** Making one background at a time meant losing every version I did not export. Now I can lay twenty variations side by side, keep the ones I like, and come back to the file tomorrow. New files also start from a plain circle instead of a shape matched to someone else's reference, so what I make from here is my own.
