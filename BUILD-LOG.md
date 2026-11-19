@@ -16,6 +16,16 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-19 16:16 · Skills · 82b19c5
+**What:** Removed the Zapier illustrations skill from my personal skills repo. It now lives only in
+Zapier's design-context repo, where the reference illustrations can sit beside it.
+**Why it matters:** Housekeeping. A skill that depends on company artwork belongs in the company's
+private repo, and one copy is easier to keep right than two.
+**Shareable:** no
+**Tags:** #infra #skills #zapier
+_16 files changed, 5073 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-11-19 14:12 · Skills · ddd8bf5, df09da0
 **What:** Built a new skill that draws product illustrations in Zapier's illustration style: thin
 plum line structures, big orange shapes with grainy airbrushed edges, tiny figures. It draws 8 to 10
