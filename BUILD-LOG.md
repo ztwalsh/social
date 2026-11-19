@@ -16,6 +16,34 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-19 14:12 · Skills · ddd8bf5
+**What:** Built a new skill that draws product illustrations in Zapier's illustration style: thin
+plum line structures, big orange shapes with grainy airbrushed edges, tiny figures. It draws 8 to 10
+numbered options a round as SVG, shows them in a viewer where I pick by number, grows the next round
+from the picks, and can export a short looping mp4 or gif. Clicking an option opens a panel that
+lists the colors it uses and lets me swap them for other palette colors live.
+**Why it matters:** It started as a copy of the logo skill, but the hard part was getting drawn-in-code
+SVG to sit beside a studio's hand-made work. What got it there was being critical rather than
+clever: sub-agents drew tests, set them next to the real illustrations at the same size, listed every
+difference, and wrote each miss back into the style guide with a number (how big the hero shape is,
+how much of it dissolves, how many hand-drawn marks). Fresh agents that knew nothing then ran the
+skill cold, which caught wrong step orders and a viewer bug. Measuring the reference animations
+also overturned a guess: the grain never boils, it only sprays on fast frames.
+**Shareable:** yes — the viewer with a round open and the color panel swapping an accent; a side-by-side of an early test and a later one. Check before posting any Zapier-style artwork publicly.
+**Tags:** #new-feature #design #ai #zapier #skills
+_16 files changed, 5068 insertions(+) · branch `zapier-illustrations-skill`_
+status: enriched
+
+## 2026-11-18 16:51 · assistant · a730ab9, b60ebd0
+**What:** Filed two more meetings into the work knowledge-base repo, one customer feedback session
+and one on how a research insights repository should be structured. Each is a written summary plus
+the full transcript.
+**Why it matters:** Routine filing by the meeting-notes skill, no new behavior. _(reconstructed from commit metadata)_
+**Shareable:** no
+**Tags:** #work #skills #knowledge-base
+_2 files changed, 2254 insertions(+) · branch `main`_
+status: enriched
+
 ## 2026-11-17 13:07 · assistant · ef2ba53
 **What:** Filed four meetings into the work knowledge-base repo — three from this week and one from
 October that had been missed. Each note is a written-up summary plus the complete verbatim
