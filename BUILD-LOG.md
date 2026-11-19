@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-19 16:27 · ztwalsh-skills · 237f322
+**What:** My own skills now have a repo of their own. Ten skills (logo, brainstorm, brain, ship, code reviewer, ticket planner, ticket queue, the two social ones, and a copy of Benji Taylor's Stageshow) were split out of a fork of someone else's collection into one flat folder, with their commit history kept, a README that says what each does and how to install it, and a licence in my name. Not yet on GitHub.
+**Why it matters:** The skills lived in a fork whose README, licence and front page all belonged to another author, so a link to the logo skill made it look like their work. A repo that holds only what I use is something I can point people to.
+**Shareable:** no — nothing to show until the repo is public; the post is the logo skill itself.
+**Tags:** #infra #ai #dx
+_418 files changed, 86 insertions(+), 8 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-11-19 16:16 · Skills · 82b19c5
 **What:** Removed the Zapier illustrations skill from my personal skills repo. It now lives only in
 Zapier's design-context repo, where the reference illustrations can sit beside it.
