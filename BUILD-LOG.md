@@ -12,7 +12,7 @@ the raw material for weekly social posts.
 - Newest entry first. Once this file gets long, older years move to `log/2026.md`.
 
 Entry format lives in
-`Skills/agent-skills/social/social-log/reference/entry-format.md`.
+`skills/social-log/reference/entry-format.md`.
 
 <!-- entries below -->
 

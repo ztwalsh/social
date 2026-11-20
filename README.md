@@ -25,5 +25,5 @@ personal projects, plus drafted posts and the screenshots/clips that go with the
    `drafts/YYYY-Www.md`. Skill: `social-draft`.
 
 Skills + hook source live in
-`~/sites/personal-projects/Skills/agent-skills/social/`. See that folder's
+`~/sites/personal-projects/skills/` (`social-log` and `social-draft`). See that folder's
 `social-log/install.md` for setup.
