@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-20 15:57 · skills · 58c56ab
+**What:** Flattened my skills repo. The ten skills used to sit in a `skills/` folder inside a repo that is itself called skills; now each one is a folder at the top level, and the README, licence and install notes point at the new paths. The local folder was also renamed from `ztwalsh-skills` to `skills` to match the repo.
+**Why it matters:** Housekeeping. `skills/skills/logo` was one folder deeper than it needed to be, and a shorter path makes the install command and the links easier to read. Subfolders can come back when there are enough skills to need them.
+**Shareable:** no
+**Tags:** #infra #refactor #dx
+_418 files changed, 22 insertions(+), 22 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-11-19 16:27 · ztwalsh-skills · 237f322
 **What:** My own skills now have a repo of their own. Ten skills (logo, brainstorm, brain, ship, code reviewer, ticket planner, ticket queue, the two social ones, and a copy of Benji Taylor's Stageshow) were split out of a fork of someone else's collection into one flat folder, with their commit history kept, a README that says what each does and how to install it, and a licence in my name. Not yet on GitHub.
 **Why it matters:** The skills lived in a fork whose README, licence and front page all belonged to another author, so a link to the logo skill made it look like their work. A repo that holds only what I use is something I can point people to.
