@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-24 14:44 · ztwalsh.com · 3653905
+**What:** My new site's display typeface now reaches every visitor. The licensed font files stay out of the code and are copied in from private storage when the site builds, which fails if they are missing. Button text is also properly centered.
+**Why it matters:** The site looked perfect on my own computer because the typeface is installed there. My phone showed the truth: everyone else was getting a fallback.
+**Shareable:** no — a good aside in the redesign post
+**Tags:** #infra #bugfix #ui
+_4 files changed, 361 insertions(+), 6 deletions(-) · branch `krause-fonts`_
+status: enriched
+
 ## 2026-11-24 14:26 · ztwalsh.com · 04ecc12
 **What:** Polished my new site and put it live. The Harps picture now shows what the app does: hold a key, your voice draws itself in the sentence, and it turns into words when you let go. The logo picture uses six very different marks, the phone layout is centered, and the last arrow reaches the bottom of the page.
 **Why it matters:** A picture of an app's website says little about the app. Replacing it with the one thing the app does made it easier to understand at a glance. The arrow bug was a neat one: hiding the button you just clicked made the browser give up on the scroll.
