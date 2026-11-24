@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-24 09:40 · movethink-app · 2cc0728
+**What:** Switched on Apple Health access for movethink: the app is now allowed to ask for permission to read workouts, and the permission prompt says it reads running, walking, cycling and swimming workouts so they show up alongside the entries you log. Nothing reads from Health yet.
+**Why it matters:** Groundwork. It is the permission step that has to exist before workouts recorded on a watch can appear in the log without being typed in; on its own it changes nothing a user can see.
+**Shareable:** no
+**Tags:** #infra #integration
+_2 files changed, 30 insertions(+), 22 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-11-24 09:14 · movethink-app · 530ff3d
 **What:** The app's setup screen for connecting movethink to an AI assistant now gives out the server address `mcp.movethink.app` instead of the old `cardio-mcp.vercel.app`.
 **Why it matters:** Plumbing that follows the rename. The app has been called movethink for a week, and the address people paste into their assistant was the last place still using the old name and a hosting provider's domain.
