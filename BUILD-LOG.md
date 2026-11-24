@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-24 11:21 · ztwalsh.com · 65aaf14
+**What:** Rebuilt my personal site from scratch: a tilted, chunky "designer and builder." up front, one full-screen page per project, and a "say hi." at the end, all in near-black and warm white. Every project has a live, moving picture instead of a screenshot (a spoken run turning into a logged one, a galaxy re-forming as its sliders move), each with its own crop for phones. Not deployed yet.
+**Why it matters:** It took eight rounds and about fifteen prototypes to get from painted grocery signs to something simple. What made it work was restraint: one playful typeface used in two styles, no accent color, and letting the projects supply the color. The moving pictures are drawn in code or captured from the real projects, so they show what each thing does without a video.
+**Shareable:** yes — hold until the site is live.
+**Tags:** #design #new-feature #ui #motion
+_180 files changed, 12948 insertions(+), 1232 deletions(-) · branch `site-redesign`_
+status: enriched
+
 ## 2026-11-24 09:40 · movethink-app · 2cc0728
 **What:** Switched on Apple Health access for movethink: the app is now allowed to ask for permission to read workouts, and the permission prompt says it reads running, walking, cycling and swimming workouts so they show up alongside the entries you log. Nothing reads from Health yet.
 **Why it matters:** Groundwork. It is the permission step that has to exist before workouts recorded on a watch can appear in the log without being typed in; on its own it changes nothing a user can see.
