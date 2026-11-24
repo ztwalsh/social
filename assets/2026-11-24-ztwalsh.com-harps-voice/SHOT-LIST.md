@@ -1,0 +1,3 @@
+- Harps picture, screen recording: key down, waveform in the line, key up, words land
+- Logo picture: three stills, one per selected mark
+- Phone hero before/after, left-heavy vs centered

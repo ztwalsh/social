@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-24 14:26 · ztwalsh.com · 04ecc12
+**What:** Polished my new site and put it live. The Harps picture now shows what the app does: hold a key, your voice draws itself in the sentence, and it turns into words when you let go. The logo picture uses six very different marks, the phone layout is centered, and the last arrow reaches the bottom of the page.
+**Why it matters:** A picture of an app's website says little about the app. Replacing it with the one thing the app does made it easier to understand at a glance. The arrow bug was a neat one: hiding the button you just clicked made the browser give up on the scroll.
+**Shareable:** yes — the Harps picture as a short recording (assets/2026-11-24-ztwalsh.com-harps-voice)
+**Tags:** #polish #motion #ui #bugfix
+_17 files changed, 186 insertions(+), 82 deletions(-) · branch `site-redesign`_
+status: enriched
+
 ## 2026-11-24 11:53 · ztwalsh.com · ad560f2
 **What:** Rebuilt the contact form for my new site. Errors appear under each field in plain words, a failed send keeps everything you wrote and offers another way to reach me, and a successful one swaps the headline from "say hi." to "got it." Not deployed yet.
 **Why it matters:** A contact form is the one place on a portfolio where failing quietly costs you something. The site has no red and no accent color, so errors had to work with shape and weight alone.
