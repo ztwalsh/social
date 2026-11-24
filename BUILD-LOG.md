@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-24 09:14 · movethink-app · 530ff3d
+**What:** The app's setup screen for connecting movethink to an AI assistant now gives out the server address `mcp.movethink.app` instead of the old `cardio-mcp.vercel.app`.
+**Why it matters:** Plumbing that follows the rename. The app has been called movethink for a week, and the address people paste into their assistant was the last place still using the old name and a hosting provider's domain.
+**Shareable:** no
+**Tags:** #infra #integration
+_1 file changed, 1 insertion(+), 1 deletion(-) · branch `feature/goals-home-insights-tab`_
+status: enriched
+
 ## 2026-11-20 15:57 · skills · 58c56ab
 **What:** Flattened my skills repo. The ten skills used to sit in a `skills/` folder inside a repo that is itself called skills; now each one is a folder at the top level, and the README, licence and install notes point at the new paths. The local folder was also renamed from `ztwalsh-skills` to `skills` to match the repo.
 **Why it matters:** Housekeeping. `skills/skills/logo` was one folder deeper than it needed to be, and a shorter path makes the install command and the links easier to read. Subfolders can come back when there are enough skills to need them.
