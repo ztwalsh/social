@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-24 11:53 · ztwalsh.com · ad560f2
+**What:** Rebuilt the contact form for my new site. Errors appear under each field in plain words, a failed send keeps everything you wrote and offers another way to reach me, and a successful one swaps the headline from "say hi." to "got it." Not deployed yet.
+**Why it matters:** A contact form is the one place on a portfolio where failing quietly costs you something. The site has no red and no accent color, so errors had to work with shape and weight alone.
+**Shareable:** no — part of the redesign post; add the "got it." state to those shots.
+**Tags:** #ui #ux #accessibility
+_8 files changed, 340 insertions(+), 242 deletions(-) · branch `site-redesign`_
+status: enriched
+
 ## 2026-11-24 11:21 · ztwalsh.com · 65aaf14
 **What:** Rebuilt my personal site from scratch: a tilted, chunky "designer and builder." up front, one full-screen page per project, and a "say hi." at the end, all in near-black and warm white. Every project has a live, moving picture instead of a screenshot (a spoken run turning into a logged one, a galaxy re-forming as its sliders move), each with its own crop for phones. Not deployed yet.
 **Why it matters:** It took eight rounds and about fifteen prototypes to get from painted grocery signs to something simple. What made it work was restraint: one playful typeface used in two styles, no accent color, and letting the projects supply the color. The moving pictures are drawn in code or captured from the real projects, so they show what each thing does without a video.
