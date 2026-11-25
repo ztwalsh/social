@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-25 15:49 · ztwalsh.com · 85db4ad
+**What:** Set the hero name in the headline's own heavy italic, tilted to match, with more room under it. Gave the page menu a faint drop shadow and moved a story's closing buttons below its last paragraph.
+**Why it matters:** The cream menu was melting into the giant cream letters behind it. A shadow in the page's color fixed both themes on paper, but it glowed white around the dark menu, so a plain dark shadow won.
+**Shareable:** no
+**Tags:** #polish #ui
+_5 files changed, 67 insertions(+), 13 deletions(-) · branch `main`_
+status: enriched
+
 ## 2026-11-25 13:00 · ztwalsh.com · aa4067b
 **What:** On a branch, not live yet: the portfolio gets a one-sentence introduction, a section for professional work with one chapter on screen at a time, and a small menu beside the page arrows that lists every page.
 **Why it matters:** The site only showed side projects, so half the story was missing. The details took the care: pages click into place, the page number rolls, and the menu icons fade while their neighbors scoot over instead of popping.
