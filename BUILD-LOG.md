@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-25 08:14 · ztwalsh.com · 3c9576a
+**What:** Turned sideways, the site's color now runs all the way under an iPhone's notch while the words and buttons stay clear of it. The site also has a new favicon: a slanted lower-case z.
+**Why it matters:** Cream pages had a black strip down each side on a sideways phone, which made a full-screen site look unfinished. The z is lifted straight from the headline's typeface, so the tab looks like the site.
+**Shareable:** yes, notch before/after and the z in a browser tab
+**Tags:** #polish #ui #mobile #bugfix
+_7 files changed, 25 insertions(+), 6 deletions(-) · branch `notch-strips`_
+status: enriched
+
 ## 2026-11-24 18:42 · ztwalsh.com · 0723b1b
 **What:** Gave the new portfolio its motion: the headline and "say hi." type in letter by letter ("hi." waves), and each project picture lifts, grows 5% and tilts its own way on hover, then opens the project on click. Also kept words and picture side by side on sideways phones.
 **Why it matters:** Small motion is mostly removing hitches. The first headline version slowed down because every word eased to a stop, so it became one steady beat per letter. The hover jerked only the first time because the arrival animation and the hover fought over the same CSS property; giving each its own fixed the snap.
