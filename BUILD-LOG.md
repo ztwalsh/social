@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-24 18:42 · ztwalsh.com · 0723b1b
+**What:** Gave the new portfolio its motion: the headline and "say hi." type in letter by letter ("hi." waves), and each project picture lifts, grows 5% and tilts its own way on hover, then opens the project on click. Also kept words and picture side by side on sideways phones.
+**Why it matters:** Small motion is mostly removing hitches. The first headline version slowed down because every word eased to a stop, so it became one steady beat per letter. The hover jerked only the first time because the arrival animation and the hover fought over the same CSS property; giving each its own fixed the snap.
+**Shareable:** yes: screen recording of the headline typing in, and hovering through the six pictures
+**Tags:** #polish #motion #ui #responsive
+_12 files changed, 165 insertions(+), 45 deletions(-) · branch `sideways-phone`_
+status: enriched
+
 ## 2026-11-24 14:44 · ztwalsh.com · 3653905
 **What:** My new site's display typeface now reaches every visitor. The licensed font files stay out of the code and are copied in from private storage when the site builds, which fails if they are missing. Button text is also properly centered.
 **Why it matters:** The site looked perfect on my own computer because the typeface is installed there. My phone showed the truth: everyone else was getting a fallback.
