@@ -16,6 +16,14 @@ Entry format lives in
 
 <!-- entries below -->
 
+## 2026-11-25 13:00 · ztwalsh.com · aa4067b
+**What:** On a branch, not live yet: the portfolio gets a one-sentence introduction, a section for professional work with one chapter on screen at a time, and a small menu beside the page arrows that lists every page.
+**Why it matters:** The site only showed side projects, so half the story was missing. The details took the care: pages click into place, the page number rolls, and the menu icons fade while their neighbors scoot over instead of popping.
+**Shareable:** yes, once it is live: the menu opening and the icons shifting as you page
+**Tags:** #new-feature #ui #motion
+_52 files changed, 1842 insertions(+), 60 deletions(-) · branch `professional-work`_
+status: enriched
+
 ## 2026-11-25 08:14 · ztwalsh.com · 3c9576a
 **What:** Turned sideways, the site's color now runs all the way under an iPhone's notch while the words and buttons stay clear of it. The site also has a new favicon: a slanted lower-case z.
 **Why it matters:** Cream pages had a black strip down each side on a sideways phone, which made a full-screen site look unfinished. The z is lifted straight from the headline's typeface, so the tab looks like the site.
